@@ -1,0 +1,75 @@
+/** @format */
+.menu-container {
+	display: none;
+}
+.banner-content {
+	padding: 13% 8% 0;
+}
+.banner-content h1 {
+	font: var(--banner-font);
+	color: var(--heading-color);
+	letter-spacing: 2px;
+	padding: 2% 0 1%;
+	text-shadow: 6px 6px var(--white-color), 12px 12px var(--orange-color);
+}
+.banner-content h3 {
+	font: normal 2.5rem /1.5rem Open Sans, serif;
+	font-weight: 700;
+}
+.banner-content h3 span {
+	color: var(--theme-color);
+}
+.banner-content .main-outline-btn {
+	margin-inline: 3%;
+}
+.banner-btn {
+	padding-top: 2%;
+}
+.banner-image-one {
+	padding: 10% 0 0;
+}
+.banner-image-two {
+	text-align: right;
+	margin-top: -8%;
+}
+.banner-image {
+	position: relative;
+}
+.banner-object-one {
+	position: absolute;
+	top: 4%;
+	left: 25%;
+	right: 0;
+	margin: 0 auto;
+	height: 100px;
+	width: 100px;
+	transform: rotate(80deg);
+}
+.banner-object-two {
+	position: absolute;
+	top: 12%;
+	left: -20%;
+	height: 100px;
+	width: 100px;
+	transform: rotate(-21deg);
+}
+.banner-object-three {
+	position: absolute;
+	bottom: 50%;
+	right: 7%;
+}
+.banner-object-four {
+	position: absolute;
+	bottom: 12%;
+	height: 100px;
+	width: 100px;
+	left: 10%;
+	background-blend-mode: multiply;
+}
+.banner-object-five {
+	position: absolute;
+	bottom: 5%;
+	left: -30%;
+	height: 100px;
+	width: 100px;
+}
