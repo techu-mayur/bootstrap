@@ -116,7 +116,12 @@
 	position: relative;
 	border: 0;
 	padding: 1rem;
-	border-radius: 0;
+	border-radius: 20px;
+	-webkit-border-radius: 20px;
+	-moz-border-radius: 20px;
+	-ms-border-radius: 20px;
+	-o-border-radius: 20px;
+	cursor: pointer;
 }
 .menu-image img {
 	width: 100%;
@@ -151,4 +156,57 @@
 	font: normal 0.8rem/0.8rem Open Sans, serif;
 	padding: 3% 5%;
 	margin: 2% 5%;
+}
+.explore-foods-section h2 {
+	text-align: center;
+	margin-bottom: 2rem;
+}
+.about-us-section h2,
+.about-us-section p {
+	padding-bottom: 1.5rem;
+}
+.about-us-section .card {
+	border: 0;
+	border-radius: 0;
+	text-align: center;
+	padding: 10% 0%;
+	box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+.about-us-section .card img {
+	height: 50px;
+	width: 50px;
+	display: block;
+	margin: 0 auto;
+}
+.about-us-section .card h3 {
+	font: normal 0.8rem/1rem Open Sans, serif;
+	font-weight: 600;
+	padding-top: 10%;
+}
+.about-image-grid {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	-webkit-box-pack: end;
+	-ms-flex-pack: end;
+	justify-content: flex-end;
+	margin-left: -10px;
+	margin-right: -10px;
+}
+.about-image-grid-item {
+	padding-left: 10px;
+	padding-right: 10px;
+}
+.about-image-grid-inner {
+	overflow: hidden;
+	padding-bottom: 20px;
+}
+.about-image-grid img {
+	border-radius: 10px;
+}
+.about-us-content {
+	padding-inline-end: 10%;
 }
