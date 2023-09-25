@@ -1,6 +1,7 @@
 <!-- @format -->
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" id="home">
+
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -9,14 +10,17 @@
 		<link rel="icon" href="assets/images/favicon.gif" type="image/gif" />
 		<!-- CSS File link Here -->
 		<link rel="stylesheet" href="assets/bootstrap/bootstrap.min.css" />
+		<link rel="stylesheet" href="assets/slider/owl.carousel.min.css" />
+		<link rel="stylesheet" href="assets/slider/owl.theme.default.min.css" />
 		<link rel="stylesheet" href="assets/common/css/common.css" />
 	</head>
-	<body>
+
+	<body data-bs-spy="scroll" data-bs-target="#navigationbar" data-bs-root-margin="0px 0px -40%" data-bs-smooth-scroll="true" class="scrollspy-example" tabindex="0">
 		<!-- Loader Start Here -->
 		<div class="loader"></div>
 		<!-- Loader End Here -->
 		<!-- Header Start Here -->
-		<header id="navigationbar">
+		<header id="navigationbar" class="sticky-header">
 			<nav class="navbar navbar-expand-lg">
 				<div class="container-fluid container-xxl">
 					<a class="navbar-brand" href="#">
@@ -25,26 +29,19 @@
 						</picture>
 					</a>
 					<div class="menu-container" id="toggle">
-						<svg
-							class="ham hamRotate ham1"
-							viewBox="0 0 100 100"
-							width="80"
+						<svg class="ham hamRotate ham1" viewBox="0 0 100 100" width="80"
 							onclick="this.classList.toggle('active')">
-							<path
-								class="line top"
+							<path class="line top"
 								d="m 30,33 h 40 c 0,0 9.044436,-0.654587 9.044436,-8.508902 0,-7.854315 -8.024349,-11.958003 -14.89975,-10.85914 -6.875401,1.098863 -13.637059,4.171617 -13.637059,16.368042 v 40" />
 							<path class="line middle" d="m 30,50 h 40" />
-							<path
-								class="line bottom"
+							<path class="line bottom"
 								d="m 30,67 h 40 c 12.796276,0 15.357889,-11.717785 15.357889,-26.851538 0,-15.133752 -4.786586,-27.274118 -16.667516,-27.274118 -11.88093,0 -18.499247,6.994427 -18.435284,17.125656 l 0.252538,40" />
 						</svg>
 					</div>
 					<div class="navigation-overlay" id="navbar-overlay">
 						<ul class="navbar-nav ms-auto mb-2 mb-lg-0">
 							<li class="nav-item">
-								<a class="nav-link active" aria-current="page" href="#home"
-									>Home</a
-								>
+								<a class="nav-link active" aria-current="page" href="#home">Home</a>
 							</li>
 							<li class="nav-item">
 								<a class="nav-link" href="#menu">Menu</a>
@@ -53,13 +50,13 @@
 								<a class="nav-link" href="#explore-foods">Explore Foods</a>
 							</li>
 							<li class="nav-item">
-								<a class="nav-link" href="#">About Us</a>
+								<a class="nav-link" href="#about-us">About Us</a>
 							</li>
 							<li class="nav-item">
-								<a class="nav-link" href="#">Reviews</a>
+								<a class="nav-link" href="#reviews">Reviews</a>
 							</li>
 							<li class="nav-item">
-								<a class="nav-link" href="#">Contact Us</a>
+								<a class="nav-link" href="#contact-us">Contact Us</a>
 							</li>
 						</ul>
 					</div>
@@ -68,7 +65,7 @@
 		</header>
 		<!-- Header End Here -->
 		<!-- Banner Section Start Here -->
-		<section id="home" class="banner-section">
+		<section id="banner" class="banner-section">
 			<div class="container-fluid container-xxl">
 				<div class="row g-0">
 					<div class="col-md-7">
@@ -83,8 +80,8 @@
 								Join us today for a slice of pure delight!
 							</p>
 							<div class="banner-btn">
-								<a href="#" class="btn main-btn">Order Now</a>
-								<a href="#" class="btn main-btn main-outline-btn">View Menu</a>
+								<a href="#contact-us" class="btn main-btn">Order Now</a>
+								<a href="#menu" class="btn main-btn main-outline-btn">View Menu</a>
 							</div>
 						</div>
 					</div>
@@ -92,78 +89,49 @@
 						<div class="banner-image">
 							<div class="banner-image-one">
 								<picture>
-									<source
-										srcset="assets/images/banner/banner-image-one.webp"
-										type="image/webp" />
-									<source
-										srcset="assets/images/banner/banner-image-one.png"
-										type="image/png" />
-									<img
-										src="assets/images/banner/banner-image-one.png"
-										alt="Pizza Time"
-										class="img-fluid"
-										title="Pizza Time" />
+									<source srcset="assets/images/banner/banner-image-one.webp" type="image/webp" />
+									<source srcset="assets/images/banner/banner-image-one.png" type="image/png" />
+									<img src="assets/images/banner/banner-image-one.png" alt="Pizza Time"
+										class="img-fluid" title="Pizza Time" />
 								</picture>
 							</div>
 							<div class="banner-image-two">
 								<picture>
-									<source
-										srcset="assets/images/banner/banner-image-two.webp"
-										type="image/webp" />
-									<source
-										srcset="assets/images/banner/banner-image-two.png"
-										type="image/png" />
-									<img
-										src="assets/images/banner/banner-image-two.png"
-										alt="Pizza Time"
-										class="img-fluid"
-										title="Pizza Time" />
+									<source srcset="assets/images/banner/banner-image-two.webp" type="image/webp" />
+									<source srcset="assets/images/banner/banner-image-two.png" type="image/png" />
+									<img src="assets/images/banner/banner-image-two.png" alt="Pizza Time"
+										class="img-fluid" title="Pizza Time" />
 								</picture>
 							</div>
 							<div class="banner-objects">
 								<div class="banner-object-one">
 									<picture>
-										<img
-											src="assets/images/banner/banner-object-one.svg"
-											alt="Pizza Time"
-											class="img-fluid"
-											title="Pizza Time" />
+										<img src="assets/images/banner/banner-object-one.svg" alt="Pizza Time"
+											class="img-fluid" title="Pizza Time" />
 									</picture>
 								</div>
 								<div class="banner-object-two">
 									<picture>
-										<img
-											src="assets/images/banner/banner-object-two.svg"
-											alt="Pizza Time"
-											class="img-fluid"
-											title="Pizza Time" />
+										<img src="assets/images/banner/banner-object-two.svg" alt="Pizza Time"
+											class="img-fluid" title="Pizza Time" />
 									</picture>
 								</div>
 								<div class="banner-object-three">
 									<picture>
-										<img
-											src="assets/images/banner/banner-object-three.svg"
-											alt="Pizza Time"
-											class="img-fluid"
-											title="Pizza Time" />
+										<img src="assets/images/banner/banner-object-three.svg" alt="Pizza Time"
+											class="img-fluid" title="Pizza Time" />
 									</picture>
 								</div>
 								<div class="banner-object-four">
 									<picture>
-										<img
-											src="assets/images/banner/banner-object-four.svg"
-											alt="Pizza Time"
-											class="img-fluid"
-											title="Pizza Time" />
+										<img src="assets/images/banner/banner-object-four.svg" alt="Pizza Time"
+											class="img-fluid" title="Pizza Time" />
 									</picture>
 								</div>
 								<div class="banner-object-five">
 									<picture>
-										<img
-											src="assets/images/banner/banner-object-one.svg"
-											alt="Pizza Time"
-											class="img-fluid"
-											title="Pizza Time" />
+										<img src="assets/images/banner/banner-object-one.svg" alt="Pizza Time"
+											class="img-fluid" title="Pizza Time" />
 									</picture>
 								</div>
 							</div>
@@ -183,90 +151,54 @@
 					<div class="col-12">
 						<ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
 							<li class="nav-item" role="presentation">
-								<button
-									class="nav-link active"
-									id="pills-veg-pizza-tab"
-									data-bs-toggle="pill"
-									data-bs-target="#pills-veg-pizza"
-									type="button"
-									role="tab"
-									aria-controls="pills-veg-pizza"
-									aria-selected="true">
+								<button class="nav-link active" id="pills-veg-pizza-tab" data-bs-toggle="pill"
+									data-bs-target="#pills-veg-pizza" type="button" role="tab"
+									aria-controls="pills-veg-pizza" aria-selected="true">
 									<picture>
-										<img
-											src="assets/images/our-menu/veg-pizza.svg"
-											alt="	Veg Pizza"
-											title="	Veg Pizza"
-											class="img-fluid" />
+										<img src="assets/images/our-menu/veg-pizza.svg" alt="	Veg Pizza"
+											title="	Veg Pizza" class="img-fluid" />
 									</picture>
 									Veg Pizza
 								</button>
 							</li>
 							<li class="nav-item" role="presentation">
-								<button
-									class="nav-link"
-									id="pills-pizza-mania-tab"
-									data-bs-toggle="pill"
-									data-bs-target="#pills-pizza-mania"
-									type="button"
-									role="tab"
-									aria-controls="pills-pizza-mania"
-									aria-selected="false">
-									<img
-										src="assets/images/our-menu/pizza-mania.svg"
-										alt="Pizza Mania"
-										title="Pizza Mania"
-										class="img-fluid" />
+								<button class="nav-link" id="pills-pizza-mania-tab" data-bs-toggle="pill"
+									data-bs-target="#pills-pizza-mania" type="button" role="tab"
+									aria-controls="pills-pizza-mania" aria-selected="false">
+									<img src="assets/images/our-menu/pizza-mania.svg" alt="Pizza Mania"
+										title="Pizza Mania" class="img-fluid" />
 									Pizza Mania
 								</button>
 							</li>
 							<li class="nav-item" role="presentation">
-								<button
-									class="nav-link"
-									id="pills-slides-beverages-tab"
-									data-bs-toggle="pill"
-									data-bs-target="#pills-slides-beverages"
-									type="button"
-									role="tab"
-									aria-controls="pills-slides-beverages"
-									aria-selected="false">
-									<img
-										src="assets/images/our-menu/sides-beverages.svg"
-										alt="Sides & Beverages"
-										title="Sides & Beverages"
-										class="img-fluid" />
+								<button class="nav-link" id="pills-slides-beverages-tab" data-bs-toggle="pill"
+									data-bs-target="#pills-slides-beverages" type="button" role="tab"
+									aria-controls="pills-slides-beverages" aria-selected="false">
+									<img src="assets/images/our-menu/sides-beverages.svg" alt="Sides & Beverages"
+										title="Sides & Beverages" class="img-fluid" />
 									Sides & Beverages
 								</button>
 							</li>
 						</ul>
 						<div class="tab-content" id="pills-tabContent">
-							<div
-								class="tab-pane fade show active"
-								id="pills-veg-pizza"
-								role="tabpanel"
-								aria-labelledby="pills-veg-pizza-tab"
-								tabindex="0">
+							<div class="tab-pane fade show active" id="pills-veg-pizza" role="tabpanel"
+								aria-labelledby="pills-veg-pizza-tab" tabindex="0">
 								<div class="row g-3 justify-content-center">
 									<div class="col-md-3">
 										<div class="card h-100 menu-card">
 											<div class="menu-image">
 												<picture>
-													<source
-														srcset="assets/images/our-menu/margherita.webp"
+													<source srcset="assets/images/our-menu/margherita.webp"
 														type="image/webp" />
-													<source
-														srcset="assets/images/our-menu/margherita.png"
+													<source srcset="assets/images/our-menu/margherita.png"
 														type="image/png" />
-													<img
-														src="assets/images/our-menu/margherita.png"
-														alt="Margherita"
-														class="img-fluid"
-														title="Margherita" />
+													<img src="assets/images/our-menu/margherita.png" alt="Margherita"
+														class="img-fluid" title="Margherita" />
 												</picture>
 											</div>
 											<div class="menu-content">
 												<h3>Margherita</h3>
-												<a href="#" class="btn main-btn">Order Now</a>
+												<a href="#contact-us" class="btn main-btn">Order Now</a>
 											</div>
 										</div>
 									</div>
@@ -274,26 +206,20 @@
 										<div class="card h-100 menu-card">
 											<div class="menu-image">
 												<picture>
-													<source
-														srcset="
-															assets/images//our-menu/double-cheese-margherita.webp
-														"
-														type="image/webp" />
-													<source
-														srcset="
-															assets/images//our-menu/double-cheese-margherita.png
-														"
-														type="image/png" />
-													<img
-														src="assets/images//our-menu/double-cheese-margherita.png"
-														alt="Double Cheese Margherita"
-														class="img-fluid"
+													<source srcset="
+                              assets/images//our-menu/double-cheese-margherita.webp
+                            " type="image/webp" />
+													<source srcset="
+                              assets/images//our-menu/double-cheese-margherita.png
+                            " type="image/png" />
+													<img src="assets/images//our-menu/double-cheese-margherita.png"
+														alt="Double Cheese Margherita" class="img-fluid"
 														title="Double Cheese Margherita" />
 												</picture>
 											</div>
 											<div class="menu-content">
 												<h3>Margherita</h3>
-												<a href="#" class="btn main-btn">Order Now</a>
+												<a href="#contact-us" class="btn main-btn">Order Now</a>
 											</div>
 										</div>
 									</div>
@@ -301,22 +227,17 @@
 										<div class="card h-100 menu-card">
 											<div class="menu-image">
 												<picture>
-													<source
-														srcset="assets/images//our-menu/farm-house.webp"
+													<source srcset="assets/images//our-menu/farm-house.webp"
 														type="image/webp" />
-													<source
-														srcset="assets/images//our-menu/farm-house.png"
+													<source srcset="assets/images//our-menu/farm-house.png"
 														type="image/png" />
-													<img
-														src="assets/images//our-menu/farm-house.png"
-														alt="Farm House"
-														class="img-fluid"
-														title="Farm House" />
+													<img src="assets/images//our-menu/farm-house.png" alt="Farm House"
+														class="img-fluid" title="Farm House" />
 												</picture>
 											</div>
 											<div class="menu-content">
 												<h3>Farm House</h3>
-												<a href="#" class="btn main-btn">Order Now</a>
+												<a href="#contact-us" class="btn main-btn">Order Now</a>
 											</div>
 										</div>
 									</div>
@@ -324,22 +245,17 @@
 										<div class="card h-100 menu-card">
 											<div class="menu-image">
 												<picture>
-													<source
-														srcset="assets/images//our-menu/peppy-paneer.webp"
+													<source srcset="assets/images//our-menu/peppy-paneer.webp"
 														type="image/webp" />
-													<source
-														srcset="assets/images//our-menu/peppy-paneer.png"
+													<source srcset="assets/images//our-menu/peppy-paneer.png"
 														type="image/png" />
-													<img
-														src="assets/images//our-menu/peppy-paneer.png"
-														alt="Peppy Paneer"
-														class="img-fluid"
-														title="Peppy Paneer" />
+													<img src="assets/images//our-menu/peppy-paneer.png"
+														alt="Peppy Paneer" class="img-fluid" title="Peppy Paneer" />
 												</picture>
 											</div>
 											<div class="menu-content">
 												<h3>Peppy Paneer</h3>
-												<a href="#" class="btn main-btn">Order Now</a>
+												<a href="#contact-us" class="btn main-btn">Order Now</a>
 											</div>
 										</div>
 									</div>
@@ -347,26 +263,20 @@
 										<div class="card h-100 menu-card">
 											<div class="menu-image">
 												<picture>
-													<source
-														srcset="
-															assets/images//our-menu/mexican-green-wave.webp
-														"
-														type="image/webp" />
-													<source
-														srcset="
-															assets/images//our-menu/mexican-green-wave.png
-														"
-														type="image/png" />
-													<img
-														src="assets/images//our-menu/mexican-green-wave.png"
-														alt="Mexican Green Wave"
-														class="img-fluid"
+													<source srcset="
+                              assets/images//our-menu/mexican-green-wave.webp
+                            " type="image/webp" />
+													<source srcset="
+                              assets/images//our-menu/mexican-green-wave.png
+                            " type="image/png" />
+													<img src="assets/images//our-menu/mexican-green-wave.png"
+														alt="Mexican Green Wave" class="img-fluid"
 														title="Mexican Green Wave" />
 												</picture>
 											</div>
 											<div class="menu-content">
 												<h3>Mexican Green Wave</h3>
-												<a href="#" class="btn main-btn">Order Now</a>
+												<a href="#contact-us" class="btn main-btn">Order Now</a>
 											</div>
 										</div>
 									</div>
@@ -374,22 +284,17 @@
 										<div class="card h-100 menu-card">
 											<div class="menu-image">
 												<picture>
-													<source
-														srcset="assets/images//our-menu/deluxe-veggie.webp"
+													<source srcset="assets/images//our-menu/deluxe-veggie.webp"
 														type="image/webp" />
-													<source
-														srcset="assets/images//our-menu/deluxe-veggie.png"
+													<source srcset="assets/images//our-menu/deluxe-veggie.png"
 														type="image/png" />
-													<img
-														src="assets/images//our-menu/deluxe-veggie.png"
-														alt="Deluxe Veggie"
-														class="img-fluid"
-														title="Deluxe Veggie" />
+													<img src="assets/images//our-menu/deluxe-veggie.png"
+														alt="Deluxe Veggie" class="img-fluid" title="Deluxe Veggie" />
 												</picture>
 											</div>
 											<div class="menu-content">
 												<h3>Deluxe Veggie</h3>
-												<a href="#" class="btn main-btn">Order Now</a>
+												<a href="#contact-us" class="btn main-btn">Order Now</a>
 											</div>
 										</div>
 									</div>
@@ -397,24 +302,19 @@
 										<div class="card h-100 menu-card">
 											<div class="menu-image">
 												<picture>
-													<source
-														srcset="
-															assets/images//our-menu/veg-extravaganz.webp
-														"
-														type="image/webp" />
-													<source
-														srcset="assets/images//our-menu/veg-extravaganz.png"
+													<source srcset="
+                              assets/images//our-menu/veg-extravaganz.webp
+                            " type="image/webp" />
+													<source srcset="assets/images//our-menu/veg-extravaganz.png"
 														type="image/png" />
-													<img
-														src="assets/images//our-menu/veg-extravaganz.png"
-														alt="Veg Extravaganza"
-														class="img-fluid"
+													<img src="assets/images//our-menu/veg-extravaganz.png"
+														alt="Veg Extravaganza" class="img-fluid"
 														title="Veg Extravaganza" />
 												</picture>
 											</div>
 											<div class="menu-content">
 												<h3>Veg Extravaganza</h3>
-												<a href="#" class="btn main-btn">Order Now</a>
+												<a href="#contact-us" class="btn main-btn">Order Now</a>
 											</div>
 										</div>
 									</div>
@@ -422,24 +322,18 @@
 										<div class="card h-100 menu-card">
 											<div class="menu-image">
 												<picture>
-													<source
-														srcset="
-															assets/images//our-menu/corn-and-cheese.webp
-														"
-														type="image/webp" />
-													<source
-														srcset="assets/images//our-menu/corn-and-cheese.png"
+													<source srcset="
+                              assets/images//our-menu/corn-and-cheese.webp
+                            " type="image/webp" />
+													<source srcset="assets/images//our-menu/corn-and-cheese.png"
 														type="image/png" />
-													<img
-														src="assets/images//our-menu/corn-and-cheese.png"
-														alt="Cheese N Corn"
-														class="img-fluid"
-														title="Cheese N Corn" />
+													<img src="assets/images//our-menu/corn-and-cheese.png"
+														alt="Cheese N Corn" class="img-fluid" title="Cheese N Corn" />
 												</picture>
 											</div>
 											<div class="menu-content">
 												<h3>Cheese N Corn</h3>
-												<a href="#" class="btn main-btn">Order Now</a>
+												<a href="#contact-us" class="btn main-btn">Order Now</a>
 											</div>
 										</div>
 									</div>
@@ -447,22 +341,17 @@
 										<div class="card h-100 menu-card">
 											<div class="menu-image">
 												<picture>
-													<source
-														srcset="assets/images//our-menu/fresh-veggie.webp"
+													<source srcset="assets/images//our-menu/fresh-veggie.webp"
 														type="image/webp" />
-													<source
-														srcset="assets/images//our-menu/fresh-veggie.png"
+													<source srcset="assets/images//our-menu/fresh-veggie.png"
 														type="image/png" />
-													<img
-														src="assets/images//our-menu/fresh-veggie.png"
-														alt="Fresh Veggie"
-														class="img-fluid"
-														title="Fresh Veggie" />
+													<img src="assets/images//our-menu/fresh-veggie.png"
+														alt="Fresh Veggie" class="img-fluid" title="Fresh Veggie" />
 												</picture>
 											</div>
 											<div class="menu-content">
 												<h3>Fresh Veggie</h3>
-												<a href="#" class="btn main-btn">Order Now</a>
+												<a href="#contact-us" class="btn main-btn">Order Now</a>
 											</div>
 										</div>
 									</div>
@@ -470,24 +359,19 @@
 										<div class="card h-100 menu-card">
 											<div class="menu-image">
 												<picture>
-													<source
-														srcset="
-															assets/images//our-menu/veggie-paradise.webp
-														"
-														type="image/webp" />
-													<source
-														srcset="assets/images//our-menu/veggie-paradise.png"
+													<source srcset="
+                              assets/images//our-menu/veggie-paradise.webp
+                            " type="image/webp" />
+													<source srcset="assets/images//our-menu/veggie-paradise.png"
 														type="image/png" />
-													<img
-														src="assets/images//our-menu/veggie-paradise.png"
-														alt="Veggie Paradise"
-														class="img-fluid"
+													<img src="assets/images//our-menu/veggie-paradise.png"
+														alt="Veggie Paradise" class="img-fluid"
 														title="Veggie Paradise" />
 												</picture>
 											</div>
 											<div class="menu-content">
 												<h3>Veggie Paradise</h3>
-												<a href="#" class="btn main-btn">Order Now</a>
+												<a href="#contact-us" class="btn main-btn">Order Now</a>
 											</div>
 										</div>
 									</div>
@@ -495,22 +379,17 @@
 										<div class="card h-100 menu-card">
 											<div class="menu-image">
 												<picture>
-													<source
-														srcset="assets/images//our-menu/paneer-makhani.webp"
+													<source srcset="assets/images//our-menu/paneer-makhani.webp"
 														type="image/webp" />
-													<source
-														srcset="assets/images//our-menu/paneer-makhani.png"
+													<source srcset="assets/images//our-menu/paneer-makhani.png"
 														type="image/png" />
-													<img
-														src="assets/images//our-menu/paneer-makhani.png"
-														alt="Paneer Makhani"
-														class="img-fluid"
-														title="Paneer Makhani" />
+													<img src="assets/images//our-menu/paneer-makhani.png"
+														alt="Paneer Makhani" class="img-fluid" title="Paneer Makhani" />
 												</picture>
 											</div>
 											<div class="menu-content">
 												<h3>Paneer Makhani</h3>
-												<a href="#" class="btn main-btn">Order Now</a>
+												<a href="#contact-us" class="btn main-btn">Order Now</a>
 											</div>
 										</div>
 									</div>
@@ -518,58 +397,43 @@
 										<div class="card h-100 menu-card">
 											<div class="menu-image">
 												<picture>
-													<source
-														srcset="
-															assets/images//our-menu/indi-tandoori-paneer.webp
-														"
-														type="image/webp" />
-													<source
-														srcset="
-															assets/images//our-menu/indi-tandoori-paneer.png
-														"
-														type="image/png" />
-													<img
-														src="assets/images//our-menu/indi-tandoori-paneer.png"
-														alt="Indi Tandoori Paneer"
-														class="img-fluid"
+													<source srcset="
+                              assets/images//our-menu/indi-tandoori-paneer.webp
+                            " type="image/webp" />
+													<source srcset="
+                              assets/images//our-menu/indi-tandoori-paneer.png
+                            " type="image/png" />
+													<img src="assets/images//our-menu/indi-tandoori-paneer.png"
+														alt="Indi Tandoori Paneer" class="img-fluid"
 														title="Indi Tandoori Paneer" />
 												</picture>
 											</div>
 											<div class="menu-content">
 												<h3>Indi Tandoori Paneer</h3>
-												<a href="#" class="btn main-btn">Order Now</a>
+												<a href="#contact-us" class="btn main-btn">Order Now</a>
 											</div>
 										</div>
 									</div>
 								</div>
 							</div>
-							<div
-								class="tab-pane fade"
-								id="pills-pizza-mania"
-								role="tabpanel"
-								aria-labelledby="pills-pizza-mania-tab"
-								tabindex="0">
+							<div class="tab-pane fade" id="pills-pizza-mania" role="tabpanel"
+								aria-labelledby="pills-pizza-mania-tab" tabindex="0">
 								<div class="row g-3 justify-content-center">
 									<div class="col-md-3">
 										<div class="card h-100 menu-card">
 											<div class="menu-image">
 												<picture>
-													<source
-														srcset="assets/images/our-menu/margherita.webp"
+													<source srcset="assets/images/our-menu/margherita.webp"
 														type="image/webp" />
-													<source
-														srcset="assets/images/our-menu/margherita.png"
+													<source srcset="assets/images/our-menu/margherita.png"
 														type="image/png" />
-													<img
-														src="assets/images/our-menu/margherita.png"
-														alt="Margherita"
-														class="img-fluid"
-														title="Margherita" />
+													<img src="assets/images/our-menu/margherita.png" alt="Margherita"
+														class="img-fluid" title="Margherita" />
 												</picture>
 											</div>
 											<div class="menu-content">
 												<h3>Margherita</h3>
-												<a href="#" class="btn main-btn">Order Now</a>
+												<a href="#contact-us" class="btn main-btn">Order Now</a>
 											</div>
 										</div>
 									</div>
@@ -577,26 +441,20 @@
 										<div class="card h-100 menu-card">
 											<div class="menu-image">
 												<picture>
-													<source
-														srcset="
-															assets/images//our-menu/double-cheese-margherita.webp
-														"
-														type="image/webp" />
-													<source
-														srcset="
-															assets/images//our-menu/double-cheese-margherita.png
-														"
-														type="image/png" />
-													<img
-														src="assets/images//our-menu/double-cheese-margherita.png"
-														alt="Double Cheese Margherita"
-														class="img-fluid"
+													<source srcset="
+                              assets/images//our-menu/double-cheese-margherita.webp
+                            " type="image/webp" />
+													<source srcset="
+                              assets/images//our-menu/double-cheese-margherita.png
+                            " type="image/png" />
+													<img src="assets/images//our-menu/double-cheese-margherita.png"
+														alt="Double Cheese Margherita" class="img-fluid"
 														title="Double Cheese Margherita" />
 												</picture>
 											</div>
 											<div class="menu-content">
 												<h3>Margherita</h3>
-												<a href="#" class="btn main-btn">Order Now</a>
+												<a href="#contact-us" class="btn main-btn">Order Now</a>
 											</div>
 										</div>
 									</div>
@@ -604,22 +462,17 @@
 										<div class="card h-100 menu-card">
 											<div class="menu-image">
 												<picture>
-													<source
-														srcset="assets/images//our-menu/farm-house.webp"
+													<source srcset="assets/images//our-menu/farm-house.webp"
 														type="image/webp" />
-													<source
-														srcset="assets/images//our-menu/farm-house.png"
+													<source srcset="assets/images//our-menu/farm-house.png"
 														type="image/png" />
-													<img
-														src="assets/images//our-menu/farm-house.png"
-														alt="Farm House"
-														class="img-fluid"
-														title="Farm House" />
+													<img src="assets/images//our-menu/farm-house.png" alt="Farm House"
+														class="img-fluid" title="Farm House" />
 												</picture>
 											</div>
 											<div class="menu-content">
 												<h3>Farm House</h3>
-												<a href="#" class="btn main-btn">Order Now</a>
+												<a href="#contact-us" class="btn main-btn">Order Now</a>
 											</div>
 										</div>
 									</div>
@@ -627,22 +480,17 @@
 										<div class="card h-100 menu-card">
 											<div class="menu-image">
 												<picture>
-													<source
-														srcset="assets/images//our-menu/peppy-paneer.webp"
+													<source srcset="assets/images//our-menu/peppy-paneer.webp"
 														type="image/webp" />
-													<source
-														srcset="assets/images//our-menu/peppy-paneer.png"
+													<source srcset="assets/images//our-menu/peppy-paneer.png"
 														type="image/png" />
-													<img
-														src="assets/images//our-menu/peppy-paneer.png"
-														alt="Peppy Paneer"
-														class="img-fluid"
-														title="Peppy Paneer" />
+													<img src="assets/images//our-menu/peppy-paneer.png"
+														alt="Peppy Paneer" class="img-fluid" title="Peppy Paneer" />
 												</picture>
 											</div>
 											<div class="menu-content">
 												<h3>Peppy Paneer</h3>
-												<a href="#" class="btn main-btn">Order Now</a>
+												<a href="#contact-us" class="btn main-btn">Order Now</a>
 											</div>
 										</div>
 									</div>
@@ -650,26 +498,20 @@
 										<div class="card h-100 menu-card">
 											<div class="menu-image">
 												<picture>
-													<source
-														srcset="
-															assets/images//our-menu/mexican-green-wave.webp
-														"
-														type="image/webp" />
-													<source
-														srcset="
-															assets/images//our-menu/mexican-green-wave.png
-														"
-														type="image/png" />
-													<img
-														src="assets/images//our-menu/mexican-green-wave.png"
-														alt="Mexican Green Wave"
-														class="img-fluid"
+													<source srcset="
+                              assets/images//our-menu/mexican-green-wave.webp
+                            " type="image/webp" />
+													<source srcset="
+                              assets/images//our-menu/mexican-green-wave.png
+                            " type="image/png" />
+													<img src="assets/images//our-menu/mexican-green-wave.png"
+														alt="Mexican Green Wave" class="img-fluid"
 														title="Mexican Green Wave" />
 												</picture>
 											</div>
 											<div class="menu-content">
 												<h3>Mexican Green Wave</h3>
-												<a href="#" class="btn main-btn">Order Now</a>
+												<a href="#contact-us" class="btn main-btn">Order Now</a>
 											</div>
 										</div>
 									</div>
@@ -677,22 +519,17 @@
 										<div class="card h-100 menu-card">
 											<div class="menu-image">
 												<picture>
-													<source
-														srcset="assets/images//our-menu/deluxe-veggie.webp"
+													<source srcset="assets/images//our-menu/deluxe-veggie.webp"
 														type="image/webp" />
-													<source
-														srcset="assets/images//our-menu/deluxe-veggie.png"
+													<source srcset="assets/images//our-menu/deluxe-veggie.png"
 														type="image/png" />
-													<img
-														src="assets/images//our-menu/deluxe-veggie.png"
-														alt="Deluxe Veggie"
-														class="img-fluid"
-														title="Deluxe Veggie" />
+													<img src="assets/images//our-menu/deluxe-veggie.png"
+														alt="Deluxe Veggie" class="img-fluid" title="Deluxe Veggie" />
 												</picture>
 											</div>
 											<div class="menu-content">
 												<h3>Deluxe Veggie</h3>
-												<a href="#" class="btn main-btn">Order Now</a>
+												<a href="#contact-us" class="btn main-btn">Order Now</a>
 											</div>
 										</div>
 									</div>
@@ -700,24 +537,19 @@
 										<div class="card h-100 menu-card">
 											<div class="menu-image">
 												<picture>
-													<source
-														srcset="
-															assets/images//our-menu/veg-extravaganz.webp
-														"
-														type="image/webp" />
-													<source
-														srcset="assets/images//our-menu/veg-extravaganz.png"
+													<source srcset="
+                              assets/images//our-menu/veg-extravaganz.webp
+                            " type="image/webp" />
+													<source srcset="assets/images//our-menu/veg-extravaganz.png"
 														type="image/png" />
-													<img
-														src="assets/images//our-menu/veg-extravaganz.png"
-														alt="Veg Extravaganza"
-														class="img-fluid"
+													<img src="assets/images//our-menu/veg-extravaganz.png"
+														alt="Veg Extravaganza" class="img-fluid"
 														title="Veg Extravaganza" />
 												</picture>
 											</div>
 											<div class="menu-content">
 												<h3>Veg Extravaganza</h3>
-												<a href="#" class="btn main-btn">Order Now</a>
+												<a href="#contact-us" class="btn main-btn">Order Now</a>
 											</div>
 										</div>
 									</div>
@@ -725,56 +557,41 @@
 										<div class="card h-100 menu-card">
 											<div class="menu-image">
 												<picture>
-													<source
-														srcset="
-															assets/images//our-menu/corn-and-cheese.webp
-														"
-														type="image/webp" />
-													<source
-														srcset="assets/images//our-menu/corn-and-cheese.png"
+													<source srcset="
+                              assets/images//our-menu/corn-and-cheese.webp
+                            " type="image/webp" />
+													<source srcset="assets/images//our-menu/corn-and-cheese.png"
 														type="image/png" />
-													<img
-														src="assets/images//our-menu/corn-and-cheese.png"
-														alt="Cheese N Corn"
-														class="img-fluid"
-														title="Cheese N Corn" />
+													<img src="assets/images//our-menu/corn-and-cheese.png"
+														alt="Cheese N Corn" class="img-fluid" title="Cheese N Corn" />
 												</picture>
 											</div>
 											<div class="menu-content">
 												<h3>Cheese N Corn</h3>
-												<a href="#" class="btn main-btn">Order Now</a>
+												<a href="#contact-us" class="btn main-btn">Order Now</a>
 											</div>
 										</div>
 									</div>
 								</div>
 							</div>
-							<div
-								class="tab-pane fade"
-								id="pills-slides-beverages"
-								role="tabpanel"
-								aria-labelledby="pills-slides-beverages-tab"
-								tabindex="0">
+							<div class="tab-pane fade" id="pills-slides-beverages" role="tabpanel"
+								aria-labelledby="pills-slides-beverages-tab" tabindex="0">
 								<div class="row g-3 justify-content-center">
 									<div class="col-md-3">
 										<div class="card h-100 menu-card">
 											<div class="menu-image">
 												<picture>
-													<source
-														srcset="assets/images/our-menu/margherita.webp"
+													<source srcset="assets/images/our-menu/margherita.webp"
 														type="image/webp" />
-													<source
-														srcset="assets/images/our-menu/margherita.png"
+													<source srcset="assets/images/our-menu/margherita.png"
 														type="image/png" />
-													<img
-														src="assets/images/our-menu/margherita.png"
-														alt="Margherita"
-														class="img-fluid"
-														title="Margherita" />
+													<img src="assets/images/our-menu/margherita.png" alt="Margherita"
+														class="img-fluid" title="Margherita" />
 												</picture>
 											</div>
 											<div class="menu-content">
 												<h3>Margherita</h3>
-												<a href="#" class="btn main-btn">Order Now</a>
+												<a href="#contact-us" class="btn main-btn">Order Now</a>
 											</div>
 										</div>
 									</div>
@@ -782,26 +599,20 @@
 										<div class="card h-100 menu-card">
 											<div class="menu-image">
 												<picture>
-													<source
-														srcset="
-															assets/images//our-menu/double-cheese-margherita.webp
-														"
-														type="image/webp" />
-													<source
-														srcset="
-															assets/images//our-menu/double-cheese-margherita.png
-														"
-														type="image/png" />
-													<img
-														src="assets/images//our-menu/double-cheese-margherita.png"
-														alt="Double Cheese Margherita"
-														class="img-fluid"
+													<source srcset="
+                              assets/images//our-menu/double-cheese-margherita.webp
+                            " type="image/webp" />
+													<source srcset="
+                              assets/images//our-menu/double-cheese-margherita.png
+                            " type="image/png" />
+													<img src="assets/images//our-menu/double-cheese-margherita.png"
+														alt="Double Cheese Margherita" class="img-fluid"
 														title="Double Cheese Margherita" />
 												</picture>
 											</div>
 											<div class="menu-content">
 												<h3>Margherita</h3>
-												<a href="#" class="btn main-btn">Order Now</a>
+												<a href="#contact-us" class="btn main-btn">Order Now</a>
 											</div>
 										</div>
 									</div>
@@ -809,22 +620,17 @@
 										<div class="card h-100 menu-card">
 											<div class="menu-image">
 												<picture>
-													<source
-														srcset="assets/images//our-menu/farm-house.webp"
+													<source srcset="assets/images//our-menu/farm-house.webp"
 														type="image/webp" />
-													<source
-														srcset="assets/images//our-menu/farm-house.png"
+													<source srcset="assets/images//our-menu/farm-house.png"
 														type="image/png" />
-													<img
-														src="assets/images//our-menu/farm-house.png"
-														alt="Farm House"
-														class="img-fluid"
-														title="Farm House" />
+													<img src="assets/images//our-menu/farm-house.png" alt="Farm House"
+														class="img-fluid" title="Farm House" />
 												</picture>
 											</div>
 											<div class="menu-content">
 												<h3>Farm House</h3>
-												<a href="#" class="btn main-btn">Order Now</a>
+												<a href="#contact-us" class="btn main-btn">Order Now</a>
 											</div>
 										</div>
 									</div>
@@ -832,22 +638,17 @@
 										<div class="card h-100 menu-card">
 											<div class="menu-image">
 												<picture>
-													<source
-														srcset="assets/images//our-menu/peppy-paneer.webp"
+													<source srcset="assets/images//our-menu/peppy-paneer.webp"
 														type="image/webp" />
-													<source
-														srcset="assets/images//our-menu/peppy-paneer.png"
+													<source srcset="assets/images//our-menu/peppy-paneer.png"
 														type="image/png" />
-													<img
-														src="assets/images//our-menu/peppy-paneer.png"
-														alt="Peppy Paneer"
-														class="img-fluid"
-														title="Peppy Paneer" />
+													<img src="assets/images//our-menu/peppy-paneer.png"
+														alt="Peppy Paneer" class="img-fluid" title="Peppy Paneer" />
 												</picture>
 											</div>
 											<div class="menu-content">
 												<h3>Peppy Paneer</h3>
-												<a href="#" class="btn main-btn">Order Now</a>
+												<a href="#contact-us" class="btn main-btn">Order Now</a>
 											</div>
 										</div>
 									</div>
@@ -892,34 +693,28 @@
 								<div class="col-md-4">
 									<div class="card h-100">
 										<picture>
-											<img
-												src="assets/images/about-us/menu.svg"
-												alt="Professional Food Rate"
+											<img src="assets/images/about-us/menu.svg" alt="Professional Food Rate"
 												class="img-fluid" />
 										</picture>
-										<h3>Professional Food Rate</h3>
+										<h3>Professional <br />Food Rate</h3>
 									</div>
 								</div>
 								<div class="col-md-4">
 									<div class="card h-100">
 										<picture>
-											<img
-												src="assets/images/about-us/best-quilty-food.svg"
-												alt="Best Quilty Food"
-												class="img-fluid" />
+											<img src="assets/images/about-us/best-quilty-food.svg"
+												alt="Best Quilty Food" class="img-fluid" />
 										</picture>
-										<h3>Best Quilty Food</h3>
+										<h3>Best <br />Quality Food</h3>
 									</div>
 								</div>
 								<div class="col-md-4">
 									<div class="card h-100">
 										<picture>
-											<img
-												src="assets/images/about-us/customer-support.svg"
-												alt="Online Support 24/7"
-												class="img-fluid" />
+											<img src="assets/images/about-us/customer-support.svg"
+												alt="Online Support 24/7" class="img-fluid" />
 										</picture>
-										<h3>Online Support 24/7</h3>
+										<h3>Online <br />Support 24/7</h3>
 									</div>
 								</div>
 							</div>
@@ -930,49 +725,28 @@
 							<div class="about-image-grid-item">
 								<div class="about-image-grid-inner">
 									<picture>
-										<source
-											srcset="assets/images/about-us/about-us-one.webp"
-											type="image/webp" />
-										<source
-											srcset="assets/images/about-us/about-us-one.jpg"
-											type="image/jpg" />
-										<img
-											src="assets/images/about-us/about-us-one.jpg"
-											alt="About Us"
-											class="img-fluid"
-											title="About Us" />
+										<source srcset="assets/images/about-us/about-us-one.webp" type="image/webp" />
+										<source srcset="assets/images/about-us/about-us-one.jpg" type="image/jpg" />
+										<img src="assets/images/about-us/about-us-one.jpg" alt="About Us"
+											class="img-fluid" title="About Us" />
 									</picture>
 								</div>
 								<div class="about-image-grid-inner">
 									<picture>
-										<source
-											srcset="assets/images/about-us/about-us-two.webp"
-											type="image/webp" />
-										<source
-											srcset="assets/images/about-us/about-us-two.jpg"
-											type="image/jpg" />
-										<img
-											src="assets/images/about-us/about-us-two.jpg"
-											alt="About Us"
-											class="img-fluid"
-											title="About Us" />
+										<source srcset="assets/images/about-us/about-us-two.webp" type="image/webp" />
+										<source srcset="assets/images/about-us/about-us-two.jpg" type="image/jpg" />
+										<img src="assets/images/about-us/about-us-two.jpg" alt="About Us"
+											class="img-fluid" title="About Us" />
 									</picture>
 								</div>
 							</div>
 							<div class="about-image-grid-item">
 								<div class="about-image-grid-inner fluid-height">
 									<picture>
-										<source
-											srcset="assets/images/about-us/about-us-three.webp"
-											type="image/webp" />
-										<source
-											srcset="assets/images/about-us/about-us-three.jpg"
-											type="image/jpg" />
-										<img
-											src="assets/images/about-us/about-us-three.jpg"
-											alt="About Us"
-											class="img-fluid"
-											title="About Us" />
+										<source srcset="assets/images/about-us/about-us-three.webp" type="image/webp" />
+										<source srcset="assets/images/about-us/about-us-three.jpg" type="image/jpg" />
+										<img src="assets/images/about-us/about-us-three.jpg" alt="About Us"
+											class="img-fluid" title="About Us" />
 									</picture>
 								</div>
 							</div>
@@ -981,9 +755,504 @@
 				</div>
 			</div>
 		</section>
-		<!-- About Us Section Start Here -->
+		<!-- About Us Section End Here -->
+		<!-- Reviews Section Start Here -->
+		<section id="reviews" class="reviews-section section-spacing">
+			<div class="container">
+				<div class="row">
+					<div class="col-12">
+						<h2>
+							Top
+							<span class="highlight-heading">Reviews</span>
+						</h2>
+					</div>
+					<div class="col-12 review-slider owl-carousel owl-theme">
+						<div class="review-item items">
+							<div class="review-content">
+								<p>
+									Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quod
+									provident, exercitationem obcaecati necessitatibus nobis
+									tenetur quis ab repellendus, sed beatae sapiente facere
+									reprehenderit? Excepturi earum harum rem neque maxime
+									molestiae!
+								</p>
+							</div>
+							<div class="review-author-info row">
+								<div class="col-md-6">
+									<div class="author-image">
+										<picture>
+											<source srcset="assets/images/review/minal.webp" type="image/webp" />
+											<source srcset="assets/images/review/minal.png" type="image/png" />
+											<img src="assets/images/review/minal.png" alt="Minal" class="img-fluid"
+												title="Minal" />
+										</picture>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<ul class="list-inline ratings-review">
+										<li>
+											<picture>
+												<img src="assets/images/review/review.svg" alt="Review" title="Review"
+													class="img-fluid" />
+											</picture>
+										</li>
+										<li>
+											<picture>
+												<img src="assets/images/review/review.svg" alt="Review" title="Review"
+													class="img-fluid" />
+											</picture>
+										</li>
+										<li>
+											<picture>
+												<img src="assets/images/review/review.svg" alt="Review" title="Review"
+													class="img-fluid" />
+											</picture>
+										</li>
+										<li>
+											<picture>
+												<img src="assets/images/review/review.svg" alt="Review" title="Review"
+													class="img-fluid" />
+											</picture>
+										</li>
+										<li>
+											<picture>
+												<img src="assets/images/review/review.svg" alt="Review" title="Review"
+													class="img-fluid" />
+											</picture>
+										</li>
+									</ul>
+									<div class="author-name">
+										<h5>Minal</h5>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="review-item items">
+							<div class="review-content">
+								<p>
+									Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quod
+									provident, exercitationem obcaecati necessitatibus nobis
+									tenetur quis ab repellendus, sed beatae sapiente facere
+									reprehenderit? Excepturi earum harum rem neque maxime
+									molestiae!
+								</p>
+							</div>
+							<div class="review-author-info row">
+								<div class="col-md-6">
+									<div class="author-image">
+										<picture>
+											<source srcset="assets/images/review/viren.webp" type="image/webp" />
+											<source srcset="assets/images/review/viren.png" type="image/png" />
+											<img src="assets/images/review/viren.png" alt="Minal" class="img-fluid"
+												title="Viren" />
+										</picture>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<ul class="list-inline ratings-review">
+										<li>
+											<picture>
+												<img src="assets/images/review/review.svg" alt="Review" title="Review"
+													class="img-fluid" />
+											</picture>
+										</li>
+										<li>
+											<picture>
+												<img src="assets/images/review/review.svg" alt="Review" title="Review"
+													class="img-fluid" />
+											</picture>
+										</li>
+										<li>
+											<picture>
+												<img src="assets/images/review/review.svg" alt="Review" title="Review"
+													class="img-fluid" />
+											</picture>
+										</li>
+										<li>
+											<picture>
+												<img src="assets/images/review/review.svg" alt="Review" title="Review"
+													class="img-fluid" />
+											</picture>
+										</li>
+										<li>
+											<picture>
+												<img src="assets/images/review/review.svg" alt="Review" title="Review"
+													class="img-fluid" />
+											</picture>
+										</li>
+									</ul>
+									<div class="author-name">
+										<h5>Viren</h5>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="review-item items">
+							<div class="review-content">
+								<p>
+									Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quod
+									provident, exercitationem obcaecati necessitatibus nobis
+									tenetur quis ab repellendus, sed beatae sapiente facere
+									reprehenderit? Excepturi earum harum rem neque maxime
+									molestiae!
+								</p>
+							</div>
+							<div class="review-author-info row">
+								<div class="col-md-6">
+									<div class="author-image">
+										<picture>
+											<source srcset="assets/images/review/nikku.webp" type="image/webp" />
+											<source srcset="assets/images/review/nikku.png" type="image/png" />
+											<img src="assets/images/review/nikku.png" alt="Nikku" class="img-fluid"
+												title="Nikku" />
+										</picture>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<ul class="list-inline ratings-review">
+										<li>
+											<picture>
+												<img src="assets/images/review/review.svg" alt="Review" title="Review"
+													class="img-fluid" />
+											</picture>
+										</li>
+										<li>
+											<picture>
+												<img src="assets/images/review/review.svg" alt="Review" title="Review"
+													class="img-fluid" />
+											</picture>
+										</li>
+										<li>
+											<picture>
+												<img src="assets/images/review/review.svg" alt="Review" title="Review"
+													class="img-fluid" />
+											</picture>
+										</li>
+									</ul>
+									<div class="author-name">
+										<h5>Nikku</h5>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="review-item items">
+							<div class="review-content">
+								<p>
+									Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quod
+									provident, exercitationem obcaecati necessitatibus nobis
+									tenetur quis ab repellendus, sed beatae sapiente facere
+									reprehenderit? Excepturi earum harum rem neque maxime
+									molestiae!
+								</p>
+							</div>
+							<div class="review-author-info row">
+								<div class="col-md-6">
+									<div class="author-image">
+										<picture>
+											<source srcset="assets/images/review/pooja.webp" type="image/webp" />
+											<source srcset="assets/images/review/pooja.png" type="image/png" />
+											<img src="assets/images/review/pooja.png" alt="Pooja" class="img-fluid"
+												title="Pooja" />
+										</picture>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<ul class="list-inline ratings-review">
+										<li>
+											<picture>
+												<img src="assets/images/review/review.svg" alt="Review" title="Review"
+													class="img-fluid" />
+											</picture>
+										</li>
+										<li>
+											<picture>
+												<img src="assets/images/review/review.svg" alt="Review" title="Review"
+													class="img-fluid" />
+											</picture>
+										</li>
+										<li>
+											<picture>
+												<img src="assets/images/review/review.svg" alt="Review" title="Review"
+													class="img-fluid" />
+											</picture>
+										</li>
+										<li>
+											<picture>
+												<img src="assets/images/review/review.svg" alt="Review" title="Review"
+													class="img-fluid" />
+											</picture>
+										</li>
+									</ul>
+									<div class="author-name">
+										<h5>Pooja</h5>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="review-item items">
+							<div class="review-content">
+								<p>
+									Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quod
+									provident, exercitationem obcaecati necessitatibus nobis
+									tenetur quis ab repellendus, sed beatae sapiente facere
+									reprehenderit? Excepturi earum harum rem neque maxime
+									molestiae!
+								</p>
+							</div>
+							<div class="review-author-info row">
+								<div class="col-md-6">
+									<div class="author-image">
+										<picture>
+											<source srcset="assets/images/review/rajni.webp" type="image/webp" />
+											<source srcset="assets/images/review/rajni.png" type="image/png" />
+											<img src="assets/images/review/rajni.png" alt="Rajni" class="img-fluid"
+												title="Rajni" />
+										</picture>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<ul class="list-inline ratings-review">
+										<li>
+											<picture>
+												<img src="assets/images/review/review.svg" alt="Review" title="Review"
+													class="img-fluid" />
+											</picture>
+										</li>
+										<li>
+											<picture>
+												<img src="assets/images/review/review.svg" alt="Review" title="Review"
+													class="img-fluid" />
+											</picture>
+										</li>
+										<li>
+											<picture>
+												<img src="assets/images/review/review.svg" alt="Review" title="Review"
+													class="img-fluid" />
+											</picture>
+										</li>
+									</ul>
+									<div class="author-name">
+										<h5>Rajnikanth</h5>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="review-item items">
+							<div class="review-content">
+								<p>
+									Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quod
+									provident, exercitationem obcaecati necessitatibus nobis
+									tenetur quis ab repellendus, sed beatae sapiente facere
+									reprehenderit? Excepturi earum harum rem neque maxime
+									molestiae!
+								</p>
+							</div>
+							<div class="review-author-info row">
+								<div class="col-md-6">
+									<div class="author-image">
+										<picture>
+											<source srcset="assets/images/review/zammi.webp" type="image/webp" />
+											<source srcset="assets/images/review/zammi.png" type="image/png" />
+											<img src="assets/images/review/zammi.png" alt="Zammi" class="img-fluid"
+												title="Zammi" />
+										</picture>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<ul class="list-inline ratings-review">
+										<li>
+											<picture>
+												<img src="assets/images/review/review.svg" alt="Review" title="Review"
+													class="img-fluid" />
+											</picture>
+										</li>
+										<li>
+											<picture>
+												<img src="assets/images/review/review.svg" alt="Review" title="Review"
+													class="img-fluid" />
+											</picture>
+										</li>
+									</ul>
+									<div class="author-name">
+										<h5>Zammi</h5>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="review-item items">
+							<div class="review-content">
+								<p>
+									Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quod
+									provident, exercitationem obcaecati necessitatibus nobis
+									tenetur quis ab repellendus, sed beatae sapiente facere
+									reprehenderit? Excepturi earum harum rem neque maxime
+									molestiae!
+								</p>
+							</div>
+							<div class="review-author-info row">
+								<div class="col-md-6">
+									<div class="author-image">
+										<picture>
+											<source srcset="assets/images/review/minal.webp" type="image/webp" />
+											<source srcset="assets/images/review/minal.png" type="image/png" />
+											<img src="assets/images/review/minal.png" alt="Minal" class="img-fluid"
+												title="Minal" />
+										</picture>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<ul class="list-inline ratings-review">
+										<li>
+											<picture>
+												<img src="assets/images/review/review.svg" alt="Review" title="Review"
+													class="img-fluid" />
+											</picture>
+										</li>
+										<li>
+											<picture>
+												<img src="assets/images/review/review.svg" alt="Review" title="Review"
+													class="img-fluid" />
+											</picture>
+										</li>
+										<li>
+											<picture>
+												<img src="assets/images/review/review.svg" alt="Review" title="Review"
+													class="img-fluid" />
+											</picture>
+										</li>
+										<li>
+											<picture>
+												<img src="assets/images/review/review.svg" alt="Review" title="Review"
+													class="img-fluid" />
+											</picture>
+										</li>
+										<li>
+											<picture>
+												<img src="assets/images/review/review.svg" alt="Review" title="Review"
+													class="img-fluid" />
+											</picture>
+										</li>
+									</ul>
+									<div class="author-name">
+										<h5>Minal</h5>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- Reviews Section End Here -->
+		<!-- Contact Us Section Start Here -->
+		<section id="contact-us" class="contact-us-section section-spacing">
+			<div class="container">
+				<div class="row justify-content-center">
+					<div class="col-12">
+						<div class="contact-us-bg">
+							<h2>
+								Get In Touch <span class="highlight-heading">With US</span>
+							</h2>
+							<div class="row align-items-center">
+								<div class="col-md-6">
+									<picture>
+										<img src="assets/images/contact-us/contact-us.gif" alt="Contact"
+											class="img-fluid" title="Contact" />
+									</picture>
+								</div>
+								<div class="col-md-6">
+									<form id="contact-form" class="row">
+										<div class="col-md-6 form-group">
+											<input type="text" class="form-control" id="name_id" name="name"
+												placeholder="Name" required />
+										</div>
+										<div class="col-md-6 form-group">
+											<input type="email" class="form-control" id="email_id" name="email"
+												placeholder="Email" required />
+										</div>
+										<div class="col-md-6 form-group">
+											<input type="tel" class="form-control" id="phone_id" name="phone"
+												placeholder="Phone number" required />
+										</div>
+										<div class="col-md-6 form-group">
+											<input type="text" class="form-control" id="subject_id" name="subject"
+												placeholder="Subject" required />
+										</div>
+										<div class="col-12 form-group">
+											<textarea class="form-control" id="message_id" name="message"
+												placeholder="Message" required></textarea>
+										</div>
+										<div class="col-12">
+											<button type="submit" class="btn main-btn">
+												Send Message
+											</button>
+										</div>
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- Contact Us Section End Here -->
+		<!-- Footer Start Here -->
+		<footer>
+			<div class="container">
+				<div class="row align-items-center justify-content-between">
+					<div class="col-md-4 text-md-start">
+						<span>© 2023. All rights reserved by CrispyCraft Pizza</span>
+					</div>
+					<div class="col-md-4 text-center">
+						<ul class="list-inline social-icons">
+							<li class="list-inline-item">
+								<a href="#">
+									<picture>
+										<img src="assets/images/facebook.svg" alt="Facebook" class="img-fluid"
+											title="Facebook" />
+									</picture>
+								</a>
+							</li>
+							<li class="list-inline-item">
+								<a href="#">
+									<picture>
+										<img src="assets/images/twitter.svg" alt="Twitter" class="img-fluid"
+											title="Twitter" />
+									</picture>
+								</a>
+							</li>
+							<li class="list-inline-item">
+								<a href="#">
+									<picture>
+										<img src="assets/images/instagram.svg" alt="Instagram" class="img-fluid" title="Instagram" />
+									</picture>
+								</a>
+							</li>
+							<li class="list-inline-item">
+								<a href="#">
+									<picture>
+										<img src="assets/images/youtube.svg" alt="Youtube" class="img-fluid" title="Youtube" />
+									</picture>
+								</a>
+							</li>
+						</ul>
+					</div>
+					<div class="col-md-3 text-md-end">
+						<span>Designed by <a href="https://www.techumayur.in/" class="footer-credit" target="_blank">Techu Mayur</a></span>
+					</div>
+				</div>
+			</div>
+			<div id="backToTopBtn" class="back-to-top hidden">
+				<picture>
+					<img src="assets/images/back-to-top.svg" alt="Back to Top" class="img-fluid" title="Back to Top" />
+				</picture>
+			</div>
+		</footer>
+		<!-- Footer End Here -->
 		<script src="assets/common/js/jquery.min.js"></script>
 		<script src="assets/bootstrap/bootstrap.bundle.min.js"></script>
+		<script src="assets/slider/owl.carousel.min.js"></script>
 		<script src="assets/common/js/init.js"></script>
 	</body>
+
 </html>
