@@ -18,7 +18,7 @@ html {
 	--orange-color: #ffa500;
 	--header-font: normal 1.5rem/1.5rem Berkshire Swash, cursive, serif;
 	--footer-font: normal 1rem/2.75rem Open Sans, serif;
-	--heading-font: normal 4.438rem/4.1rem Berkshire Swash, cursive, serif;
+	--heading-font: normal 4.438rem/4.438rem Berkshire Swash, cursive, serif;
 	--sub-heading-font: normal 1.5rem/1.5rem Open Sans, serif;
 	--body-font: normal 1rem/1.5rem Open Sans, serif;
 	--btn-font: normal 1.3331rem/1.3331rem Open Sans, serif;
@@ -179,4 +179,5 @@ footer {
 	right: 0.5%;
 	cursor: pointer;
 	display: none;
+	z-index: 999;
 }

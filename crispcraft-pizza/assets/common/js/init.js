@@ -17,10 +17,10 @@
       commonLink.href = commonCSS;
       head.appendChild(commonLink);
       // Load device-specific CSS files based on screen width
-      if (window.innerWidth <= 768) {
+      if (window.innerWidth <= 767) {
         // Load mobile-specific CSS
         loadDeviceCSS("mobile.css");
-      } else if (window.innerWidth <= 1024) {
+      } else if (window.innerWidth <= 991) {
         // Load tablet-specific CSS
         loadDeviceCSS("tab.css");
       } else {
@@ -47,15 +47,32 @@
     const menu = document.querySelector("#toggle");
     const menuItems = document.querySelector("#navbar-overlay");
     const menuContainer = document.querySelector(".menu-container");
-    const menuIcon = document.querySelector("i");
+    const menuIcon = document.querySelector("svg.ham");
+
     function toggleMenu(e) {
       menuItems.classList.toggle("open");
       menuContainer.classList.toggle("full-menu");
-      // menuIcon.classList.toggle("fa-bars");
-      // menuIcon.classList.add("fa-times");
+      menuIcon.classList.remove("active"); // Remove the "active" class from the menu icon
       e.preventDefault();
     }
+
+    function closeMenu() {
+      if (menuItems.classList.contains("open")) {
+        toggleMenu();
+      }
+    }
+
     menu.addEventListener("click", toggleMenu, false);
+
+    // Add event listeners to your navigation links to close the menu
+    const navLinks = document.querySelectorAll(".nav-link");
+    navLinks.forEach((link) => {
+      link.addEventListener("click", () => {
+        closeMenu();
+        menuIcon.classList.remove("active"); // Remove the "active" class from the menu icon
+      });
+    });
+
     $(".review-slider").owlCarousel({
       loop: true,
       nav: false,
@@ -167,6 +184,71 @@
     });
     //Nav remove class
     // Function to toggle the sticky-header class and add a class to the banner-section
-   
+    //Explore Section
+    $(document).ready(function () {
+      // Initialize the large image slider
+      $(".explore-foods-slider-big").owlCarousel({
+        items: 1, // Number of items to display
+        loop: false,
+        margin: 10,
+        nav: false,
+        dots: false,
+        // Add this callback to synchronize with the small content slider
+        onChanged: syncPosition,
+      });
+
+      // Initialize the small content slider
+      $(".explore-foods-slider-small").owlCarousel({
+        items: 5, // Number of items to display
+        loop: false,
+        margin: 10,
+        nav: true,
+        dots: false,
+        responsive: {
+          0: {
+            items: 2,
+          },
+          400: {
+            items: 3,
+          },
+          992: {
+            items: 5,
+          },
+        },
+        // Add this callback to synchronize with the large image slider
+        onInitialized: syncPosition,
+        onChanged: syncPosition,
+      });
+
+      // Function to synchronize the sliders
+      function syncPosition(el) {
+        var current = el.item.index;
+
+        // Synchronize the small content slider with the large image slider
+        $(".explore-foods-slider-small")
+          .find(".owl-item")
+          .removeClass("synced")
+          .eq(current)
+          .addClass("synced");
+
+        if (
+          $(".explore-foods-slider-small").data("owl.carousel") !== undefined
+        ) {
+          var syncedCarousel = $(".explore-foods-slider-small").data(
+            "owl.carousel"
+          );
+          syncedCarousel.to(current, 100, true);
+        }
+      }
+
+      // Click event to navigate the small content slider when items are clicked
+      $(".explore-foods-slider-small").on("click", ".owl-item", function (e) {
+        e.preventDefault();
+        var number = $(this).index();
+        $(".explore-foods-slider-big")
+          .data("owl.carousel")
+          .to(number, 300, true);
+      });
+    });
   });
 })(jQuery);
