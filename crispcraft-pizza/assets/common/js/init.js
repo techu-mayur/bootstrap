@@ -20,7 +20,7 @@
       if (window.innerWidth <= 767) {
         // Load mobile-specific CSS
         loadDeviceCSS("mobile.css");
-      } else if (window.innerWidth <= 991) {
+      } else if (window.innerWidth <= 999) {
         // Load tablet-specific CSS
         loadDeviceCSS("tab.css");
       } else {
@@ -48,22 +48,18 @@
     const menuItems = document.querySelector("#navbar-overlay");
     const menuContainer = document.querySelector(".menu-container");
     const menuIcon = document.querySelector("svg.ham");
-
     function toggleMenu(e) {
       menuItems.classList.toggle("open");
       menuContainer.classList.toggle("full-menu");
       menuIcon.classList.remove("active"); // Remove the "active" class from the menu icon
       e.preventDefault();
     }
-
     function closeMenu() {
       if (menuItems.classList.contains("open")) {
         toggleMenu();
       }
     }
-
     menu.addEventListener("click", toggleMenu, false);
-
     // Add event listeners to your navigation links to close the menu
     const navLinks = document.querySelectorAll(".nav-link");
     navLinks.forEach((link) => {
@@ -72,7 +68,6 @@
         menuIcon.classList.remove("active"); // Remove the "active" class from the menu icon
       });
     });
-
     $(".review-slider").owlCarousel({
       loop: true,
       nav: false,
@@ -196,7 +191,6 @@
         // Add this callback to synchronize with the small content slider
         onChanged: syncPosition,
       });
-
       // Initialize the small content slider
       $(".explore-foods-slider-small").owlCarousel({
         items: 5, // Number of items to display
@@ -219,18 +213,15 @@
         onInitialized: syncPosition,
         onChanged: syncPosition,
       });
-
       // Function to synchronize the sliders
       function syncPosition(el) {
         var current = el.item.index;
-
         // Synchronize the small content slider with the large image slider
         $(".explore-foods-slider-small")
           .find(".owl-item")
           .removeClass("synced")
           .eq(current)
           .addClass("synced");
-
         if (
           $(".explore-foods-slider-small").data("owl.carousel") !== undefined
         ) {
@@ -240,7 +231,6 @@
           syncedCarousel.to(current, 100, true);
         }
       }
-
       // Click event to navigate the small content slider when items are clicked
       $(".explore-foods-slider-small").on("click", ".owl-item", function (e) {
         e.preventDefault();
