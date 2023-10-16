@@ -165,64 +165,68 @@ document.addEventListener("DOMContentLoaded", function () {
     },
   };
   //Order Button
-  var orderButton = {
-    init: function () {
-      var that = this;
-      $("#order").click(function (event) {
-        event.preventDefault();
-        that.calculateTotalPrice();
-        $("#priceSpan").text(totalPrice.toFixed(2));
-        window.location.href = "#confirmModal";
-        // alert("Thanks for ordering. That will be $" + totalPrice.toFixed(2));
-        that.confirmOrder();
-      });
-    },
-    calculateTotalPrice: function () {
-      totalPrice = 7.99;
-      for (var i = 0; i < pizzaIngredients.toppings.length; i++) {
-        var inputId = pizzaIngredients.toppings[i].inputId;
-        var inputDiv = document.getElementById(inputId);
-        if (inputDiv.checked) {
-          totalPrice += pizzaIngredients.toppings[i].price;
+  window.onload = function () {
+    var orderButton = {
+      init: function () {
+        var that = this;
+        $("#order").click(function (event) {
+          event.preventDefault();
+          that.calculateTotalPrice();
+          $("#priceSpan").text(totalPrice.toFixed(2));
+          window.location.href = "#confirmModal";
+          // alert("Thanks for ordering. That will be $" + totalPrice.toFixed(2));
+          that.confirmOrder();
+        });
+      },
+      calculateTotalPrice: function () {
+        totalPrice = 7.99;
+        for (var i = 0; i < pizzaIngredients.toppings.length; i++) {
+          var inputId = pizzaIngredients.toppings[i].inputId;
+          var inputDiv = document.getElementById(inputId);
+          if (inputDiv.checked) {
+            totalPrice += pizzaIngredients.toppings[i].price;
+          }
         }
-      }
-    },
-    //this is what happens when the user confirms the order
-    confirmOrder: function () {
-      $("#confirmOrder").click(function () {
-        main.defaultAppearance();
-        window.location.href = "#";
-      });
-    },
-  };
-  var main = {
-    init: function () {
-      this.defaultAppearance();
-      radioButtonIngredients.init();
-      checkboxIngredients.init();
-      orderButton.init();
-    },
-    //removes images, checked boxes, checked radio buttons that aren't supposed to on refresh or page load; needed to make certain browsers behave as intended
-    /*Without this code, if I checked off a bunch of ingredients and refreshed the page in firefox, the checkboxes would still be checked
+      },
+      //this is what happens when the user confirms the order
+      confirmOrder: function () {
+        $("#confirmOrder").click(function () {
+          main.defaultAppearance();
+          window.location.href = "#";
+        });
+      },
+    };
+
+    var main = {
+      init: function () {
+        this.defaultAppearance();
+        radioButtonIngredients.init();
+        checkboxIngredients.init();
+        orderButton.init();
+      },
+      //removes images, checked boxes, checked radio buttons that aren't supposed to on refresh or page load; needed to make certain browsers behave as intended
+      /*Without this code, if I checked off a bunch of ingredients and refreshed the page in firefox, the checkboxes would still be checked
 			and the images would be gone. Most divs holding images have the display-off class on load which makes their display none. When the user clicks a check box, 
 			the display-off class is removed. Without this code, that won't happen in firefox after a refresh; sometimes unchecking a box would've actually made the image appear.*/
-    defaultAppearance: function () {
-      $(".pizza2")
-        .not("#crustImg")
-        .not("#cheeseImg")
-        .not("#tomatoSauceImg")
-        .addClass("display-off"); //add display-off class to all divs with pizza2 class except those with ids crustImg or cheeseImg or tomatoSauceImg
-      $("input").prop("checked", false); //unchecks all inputs
-      $("#tomatoSauceCheck").prop("checked", true); //checks off tomato sauce
-      /*the above 2 lines of code achieves the same thing as this code:
+      defaultAppearance: function () {
+        $(".pizza2")
+          .not("#crustImg")
+          .not("#cheeseImg")
+          .not("#tomatoSauceImg")
+          .addClass("display-off"); //add display-off class to all divs with pizza2 class except those with ids crustImg or cheeseImg or tomatoSauceImg
+        $("input").prop("checked", false); //unchecks all inputs
+        $("#tomatoSauceCheck").prop("checked", true); //checks off tomato sauce
+        /*the above 2 lines of code achieves the same thing as this code:
 				var inputs = document.getElementsByTagName('input');
 					for (i=0;i<inputs.length;i++){
 						inputs[i].checked=false;
 					}
 				document.getElementById('tomatoSauceCheck').checked=true;
 				document.getElementById('tomatoSauceCheck').checked="checked"; */
-      $("#tomatoSauceImg").removeClass("display-off");
-    },
+        $("#tomatoSauceImg").removeClass("display-off");
+      },
+    };
+
+    main.init();
   };
-  main.init();
 });

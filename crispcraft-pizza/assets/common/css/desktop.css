@@ -58,7 +58,7 @@
 }
 .banner-object-three {
   position: absolute;
-  bottom: 50%;
+  bottom: 60%;
   right: 7%;
 }
 .banner-object-four {
@@ -225,19 +225,19 @@
   vertical-align: text-top;
   width: 15px;
   height: 15px;
-  background:var(--white-color);
+  background: var(--white-color);
 }
 #pizza-form .form-group input:hover + label:before {
-  background:var(--white-color);
+  background: var(--white-color);
 }
 #pizza-form .form-group input:focus + label:before {
   box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.12);
 }
 #pizza-form .form-group input:checked + label:before {
-  background:var(--white-color);
+  background: var(--white-color);
 }
 #pizza-form .form-group input:disabled + label {
-  color:var(--primary-color);
+  color: var(--primary-color);
   cursor: auto;
 }
 #pizza-form .form-group input:disabled + label:before {
@@ -252,54 +252,56 @@
   background: var(--theme-color);
   width: 2px;
   height: 2px;
-  box-shadow: 2px 0 0 var(--theme-color), 4px 0 0 var(--theme-color), 4px -2px 0 var(--theme-color), 4px -4px 0 var(--theme-color), 4px -6px 0 var(--theme-color), 4px -8px 0 var(--theme-color);
+  box-shadow: 2px 0 0 var(--theme-color), 4px 0 0 var(--theme-color),
+    4px -2px 0 var(--theme-color), 4px -4px 0 var(--theme-color),
+    4px -6px 0 var(--theme-color), 4px -8px 0 var(--theme-color);
   transform: rotate(45deg);
 }
 .modalDialog {
-	position: fixed;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	left: 0;
-	background: rgba(0,0,0,0.8);
-	color:white;
-	z-index: 99999;
-	opacity:0;
-	-webkit-transition: opacity 400ms ease-in;
-	-moz-transition: opacity 400ms ease-in;
-	transition: opacity 400ms ease-in;
-	pointer-events: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  z-index: 99999;
+  opacity: 0;
+  -webkit-transition: opacity 400ms ease-in;
+  -moz-transition: opacity 400ms ease-in;
+  transition: opacity 400ms ease-in;
+  pointer-events: none;
 }
 .modalDialog:target {
-	opacity:1;
-	pointer-events: auto;
+  opacity: 1;
+  pointer-events: auto;
 }
 .modalDialog > div {
-	max-width: 60%;
-	position: relative;
-	margin: 10% auto;
-	padding: 5rem;
-	background: var(--white-color);
-	box-shadow:  0px 0px 10px 1px rgba(0,0,0,0.4);
-text-align: center;
+  max-width: 60%;
+  position: relative;
+  margin: 10% auto;
+  padding: 5rem;
+  background: var(--white-color);
+  box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.4);
+  text-align: center;
 }
 .modalDialog button {
   border: 0;
   margin-inline: 1rem;
 }
-.modalDialog #confirmOrder:hover{
+.modalDialog #confirmOrder:hover {
   background-color: unset;
   border: 1px solid var(--theme-color);
   color: var(--theme-color);
 }
 #cancel {
-	opacity:0.8;
+  opacity: 0.8;
   background-color: unset;
   border: 1px solid var(--theme-color);
   color: var(--theme-color);
 }
-#cancel:hover{
-  background:  var(--theme-color);
+#cancel:hover {
+  background: var(--theme-color);
   color: var(--white-color);
 }
 .modalDialog > div h2 {
@@ -307,7 +309,7 @@ text-align: center;
 }
 .modalDialog > div p {
   margin: 3rem;
-  font:var(--sub-heading-font);
+  font: var(--sub-heading-font);
 }
 #order {
   background-color: var(--white-color);
@@ -326,8 +328,8 @@ text-align: center;
   background-color: var(--primary-color);
 }
 #priceSpansymbol,
-#priceSpan{
-  color:var(--theme-color);
+#priceSpan {
+  color: var(--theme-color);
   font-weight: 700;
 }
 .about-us-section h2,

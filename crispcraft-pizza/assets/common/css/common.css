@@ -186,3 +186,73 @@ footer {
   display: none;
   z-index: 999;
 }
+
+@-webkit-keyframes up-down {
+  0% {
+    -webkit-transform: translate(1px, 20px);
+  }
+  24% {
+    -webkit-transform: translate(1px, 30px);
+  }
+  50% {
+    -webkit-transform: translate(1px, 12px);
+  }
+  74% {
+    -webkit-transform: translate(1px, 22px);
+  }
+  100% {
+    -webkit-transform: translate(1px, 22px);
+  }
+}
+
+.floatingAnimation {
+  animation: up-down linear 4s;
+  animation-iteration-count: infinite;
+  transform-origin: 50% 50%;
+  -webkit-animation: up-down linear 4s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-transform-origin: 50% 50%;
+  -moz-animation: up-down linear 4s;
+  -moz-animation-iteration-count: infinite;
+  -moz-transform-origin: 50% 50%;
+  -o-animation: up-down linear 4s;
+  -o-animation-iteration-count: infinite;
+  -o-transform-origin: 50% 50%;
+  -ms-animation: up-down linear 4s;
+  -ms-animation-iteration-count: infinite;
+  -ms-transform-origin: 50% 50%;
+  animation-duration: 5000ms !important;
+}
+
+.rotateAnimation {
+  animation: geometric-form-animation 5s alternate infinite;
+  -webkit-animation: geometric-form-animation 5s alternate infinite;
+  animation-duration: 5000ms !important;
+}
+@keyframes geometric-form-animation {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.swingAnimation {
+  animation: swing 2s ease-in-out infinite;
+  transform-origin: top center;
+}
+
+@keyframes swing {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(15deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
