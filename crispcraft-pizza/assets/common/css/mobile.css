@@ -118,7 +118,7 @@ body {
   text-shadow: 6px 6px var(--white-color), 12px 12px var(--orange-color);
 }
 .banner-content h3 {
-  font: normal 2rem /1.5rem Open Sans, serif;
+  font: normal 2rem /2rem Open Sans, serif;
   font-weight: 700;
 }
 .banner-content h3 span {
