@@ -49,14 +49,17 @@ body {
   box-shadow: none;
   outline: 0;
 }
+#navigationbar .navbar-brand {
+  width: 40%;
+}
 #navigationbar .menu-container {
   background-color: var(--primary-color);
   border-radius: 100%;
   color: var(--white-color);
   cursor: pointer;
   position: absolute;
-  width: 250px;
-  height: 230px;
+  width: 230px;
+  height: 210px;
   right: -7rem;
   top: -7.2rem;
   transition: all 0.3s;
@@ -250,13 +253,13 @@ body {
   transform: scale(1);
 }
 .menu-content h3 {
-  font: normal 1.2rem/1.2rem Open Sans, serif;
+  font: normal 1rem/1rem Open Sans, serif;
   font-weight: 600;
-  padding-inline: 1rem;
+  padding-inline: 0.5rem 1rem;
 }
 .menu-content .main-btn {
-  font: normal 0.8rem/0.8rem Open Sans, serif;
-  padding: 3% 5%;
+  font: normal 0.7rem/0.7rem Open Sans, serif;
+  padding: 2% 4%;
   margin: 2% 5%;
 }
 .explore-foods-section h2 {
@@ -325,19 +328,19 @@ body {
   vertical-align: text-top;
   width: 15px;
   height: 15px;
-  background:var(--white-color);
+  background: var(--white-color);
 }
 #pizza-form .form-group input:hover + label:before {
-  background:var(--white-color);
+  background: var(--white-color);
 }
 #pizza-form .form-group input:focus + label:before {
   box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.12);
 }
 #pizza-form .form-group input:checked + label:before {
-  background:var(--white-color);
+  background: var(--white-color);
 }
 #pizza-form .form-group input:disabled + label {
-  color:var(--primary-color);
+  color: var(--primary-color);
   cursor: auto;
 }
 #pizza-form .form-group input:disabled + label:before {
@@ -352,54 +355,56 @@ body {
   background: var(--theme-color);
   width: 2px;
   height: 2px;
-  box-shadow: 2px 0 0 var(--theme-color), 4px 0 0 var(--theme-color), 4px -2px 0 var(--theme-color), 4px -4px 0 var(--theme-color), 4px -6px 0 var(--theme-color), 4px -8px 0 var(--theme-color);
+  box-shadow: 2px 0 0 var(--theme-color), 4px 0 0 var(--theme-color),
+    4px -2px 0 var(--theme-color), 4px -4px 0 var(--theme-color),
+    4px -6px 0 var(--theme-color), 4px -8px 0 var(--theme-color);
   transform: rotate(45deg);
 }
 .modalDialog {
-	position: fixed;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	left: 0;
-	background: rgba(0,0,0,0.8);
-	color:white;
-	z-index: 99999;
-	opacity:0;
-	-webkit-transition: opacity 400ms ease-in;
-	-moz-transition: opacity 400ms ease-in;
-	transition: opacity 400ms ease-in;
-	pointer-events: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  z-index: 99999;
+  opacity: 0;
+  -webkit-transition: opacity 400ms ease-in;
+  -moz-transition: opacity 400ms ease-in;
+  transition: opacity 400ms ease-in;
+  pointer-events: none;
 }
 .modalDialog:target {
-	opacity:1;
-	pointer-events: auto;
+  opacity: 1;
+  pointer-events: auto;
 }
 .modalDialog > div {
-	max-width: 100%;
-	position: relative;
-	margin: 10% auto;
-	padding: 2rem;
-	background: var(--white-color);
-	box-shadow:  0px 0px 10px 1px rgba(0,0,0,0.4);
-	text-align: center;
+  max-width: 100%;
+  position: relative;
+  margin: 10% auto;
+  padding: 2rem;
+  background: var(--white-color);
+  box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.4);
+  text-align: center;
 }
 .modalDialog button {
   border: 0;
   margin-inline: 1rem;
 }
-.modalDialog #confirmOrder:hover{
+.modalDialog #confirmOrder:hover {
   background-color: unset;
   border: 1px solid var(--theme-color);
   color: var(--theme-color);
 }
 #cancel {
-	opacity:0.8;
+  opacity: 0.8;
   background-color: unset;
   border: 1px solid var(--theme-color);
   color: var(--theme-color);
 }
-#cancel:hover{
-  background:  var(--theme-color);
+#cancel:hover {
+  background: var(--theme-color);
   color: var(--white-color);
 }
 .modalDialog > div h2 {
@@ -407,7 +412,7 @@ body {
 }
 .modalDialog > div p {
   margin: 3rem 1rem;
-  font:var(--sub-heading-font);
+  font: var(--sub-heading-font);
   line-height: 30px;
 }
 #order {
@@ -427,8 +432,8 @@ body {
   background-color: var(--primary-color);
 }
 #priceSpansymbol,
-#priceSpan{
-  color:var(--theme-color);
+#priceSpan {
+  color: var(--theme-color);
   font-weight: 700;
 }
 button#cancel {
@@ -608,7 +613,10 @@ footer {
   padding: 1.5rem;
 }
 .back-to-top {
-  bottom: 26%;
+  bottom: 2%;
+  right: 5%;
+  height: 60px;
+  width: 60px;
 }
 @media (max-width: 575.5px) {
   body {

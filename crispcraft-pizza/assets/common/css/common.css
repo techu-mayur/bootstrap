@@ -116,11 +116,7 @@ button {
   left: 0;
   right: 0;
   z-index: 1000;
-  transition: background-color 0.3s ease-in-out;
-  -webkit-transition: background-color 0.3s ease-in-out;
-  -moz-transition: background-color 0.3s ease-in-out;
-  -ms-transition: background-color 0.3s ease-in-out;
-  -o-transition: background-color 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 #navigationbar .navbar {
   background-color: var(--theme-color);
