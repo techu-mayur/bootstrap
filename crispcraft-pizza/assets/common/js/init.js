@@ -172,5 +172,12 @@
             }
           );
       });
+      document.addEventListener("DOMContentLoaded", function() {
+        const offscreenImages = document.querySelectorAll('img.offscreen');
+        offscreenImages.forEach(function(image) {
+          image.loading = "lazy";
+        });
+      });
+      
   });
 })(jQuery);
