@@ -113,27 +113,6 @@ Header set Cache-Control "private, must-revalidate"
 <IfModule mod_mime.c>
   AddType image/webp .webp
 </IfModule>
-# X-XSS-Protection
 <IfModule mod_headers.c>
-	Header set X-XSS-Protection "1; mode=block"
-</IfModule>
-# X-Frame-Options
-<IfModule mod_headers.c>
-	Header set X-Frame-Options "SAMEORIGIN"
-</IfModule>
-# X-Content-Type-Options
-<IfModule mod_headers.c>
-	Header set X-Content-Type-Options "nosniff"
-</IfModule>
-# Strict-Transport-Security
-<IfModule mod_headers.c>
-	Header always set Strict-Transport-Security "max-age=63072000; includeSubDomains"
-</IfModule>
-# Referrer-Policy
-<IfModule mod_headers.c>
-	Header set Referrer-Policy "same-origin"
-</IfModule>
-# Permissions-Policy
-<IfModule mod_headers.c>
-Header always set Permissions-Policy "geolocation=(), midi=(),sync-xhr=(),accelerometer=(), gyroscope=(), magnetometer=(), camera=(), fullscreen=(self)"
+    Header set Content-Security-Policy "default-src 'self'; script-src 'self';"
 </IfModule>
