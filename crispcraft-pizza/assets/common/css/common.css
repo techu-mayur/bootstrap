@@ -182,7 +182,6 @@ footer {
   display: none;
   z-index: 999;
 }
-
 @-webkit-keyframes up-down {
   0% {
     -webkit-transform: translate(1px, 20px);
@@ -200,7 +199,6 @@ footer {
     -webkit-transform: translate(1px, 22px);
   }
 }
-
 .floatingAnimation {
   animation: up-down linear 4s;
   animation-iteration-count: infinite;
@@ -219,7 +217,6 @@ footer {
   -ms-transform-origin: 50% 50%;
   animation-duration: 5000ms !important;
 }
-
 .rotateAnimation {
   animation: geometric-form-animation 5s alternate infinite;
   -webkit-animation: geometric-form-animation 5s alternate infinite;
@@ -243,6 +240,7 @@ footer {
 video {
   border: none;
   outline: none;
+  clip-path: inset(1px 1px);
 }
 @keyframes swing {
   0% {
