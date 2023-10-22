@@ -1,27 +1,21 @@
 <IfModule mod_rewrite.c>
   RewriteEngine On
-
   # Check if browser supports WebP images
   RewriteCond %{HTTP_ACCEPT} image/webp
-
   # Check if WebP replacement image exists
   RewriteCond %{DOCUMENT_ROOT}/$1.webp -f
-
   # Serve WebP image instead
   RewriteRule (.+)\.(jpe?g|png|gif)$ $1.webp [T=image/webp,E=REQUEST_image]
 </IfModule>
-
 <IfModule mod_headers.c>
   # Vary: Accept for all the requests to jpeg, png and gif
   Header append Vary Accept env=REQUEST_image
 </IfModule>
-
 <IfModule mod_mime.c>
   AddType image/webp .webp
 </IfModule>
 <IfModule mod_expires.c>
   ExpiresActive On
-
  # Images
   ExpiresByType image/jpeg "access plus 1 year"
   ExpiresByType image/gif "access plus 1 year"
@@ -29,12 +23,10 @@
   ExpiresByType image/webp "access plus 1 year"
   ExpiresByType image/svg+xml "access plus 1 year"
   ExpiresByType image/x-icon "access plus 1 year"
-
   # Video
   ExpiresByType video/webm "access plus 1 year"
   ExpiresByType video/mp4 "access plus 1 year"
   ExpiresByType video/mpeg "access plus 1 year"
-
   # Fonts
   ExpiresByType font/ttf "access plus 1 year"
   ExpiresByType font/otf "access plus 1 year"
@@ -42,13 +34,16 @@
   ExpiresByType font/woff2 "access plus 1 year"
   ExpiresByType application/font-woff "access plus 1 year"
   ExpiresByType application/font-woff2 "access plus 1 year"
-
   # CSS, JavaScript
   ExpiresByType text/css "access plus 1 year"
   ExpiresByType text/javascript "access plus 1 year"
   ExpiresByType application/javascript "access plus 1 year"
-
   # Others
   ExpiresByType application/pdf "access plus 1 year"
   ExpiresByType image/vnd.microsoft.icon "access plus 1 year"
+</IfModule>
+<IfModule mod_headers.c>
+  <FilesMatch "\.(jpg|jpeg|png|gif|ico|webp|svg)$">
+    Header set Cache-Control "public, max-age=31536000"
+  </FilesMatch>
 </IfModule>
