@@ -1,19 +1,31 @@
 !(function ($) {
   $(document).ready(function () {
-    // Disable right-click
-    window.addEventListener("contextmenu", function (e) {
+     // Disable right-click
+     window.addEventListener('contextmenu', function (e) {
       e.preventDefault();
-    });
-    // Disable image downloads (prevents drag and drop)
-    document.addEventListener("dragstart", function (e) {
+  });
+  // Disable image downloads (prevents drag and drop)
+  document.addEventListener('dragstart', function (e) {
       e.preventDefault();
-    });
-    // Disable viewing page source (Ctrl+U)
-    window.addEventListener("keydown", function (e) {
-      if (e.key === "U" && (e.ctrlKey || e.metaKey)) {
-        e.preventDefault();
+  });
+  // Disable viewing page source (Ctrl+U)
+  window.addEventListener('keydown', function (e) {
+      if (e.key === 'U' && (e.ctrlKey || e.metaKey)) {
+          e.preventDefault();
       }
-    });
+  });
+  // Disable right-click (alternative method)
+  document.onmousedown = function(e) {
+      if (e.button == 2) {
+          return false;
+      }
+  };
+  // Disable F12 key (developer tools)
+  document.onkeydown = function(e) {
+      if (e.keyCode == 123) {
+          return false;
+      }
+  };
     function detectDevice() {
       var head = document.head,
         commonCSS = "assets/common/css/common.min.css",
