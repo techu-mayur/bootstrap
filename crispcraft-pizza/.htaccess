@@ -99,3 +99,7 @@ Header unset foo env=REMOVE_HEADER
     Header set Strict-Transport-Security "max-age=31536000" env=HTTPS
     Header always set X-Frame-Options "sameorigin"
 </ifModule>
+# Cache assets for one week
+<FilesMatch "\.(jpg|jpeg|png|gif|ico|css|js)$">
+    Header set Cache-Control "max-age=604800, public"
+</FilesMatch>
