@@ -241,6 +241,7 @@ video {
   border: none;
   outline: none;
   clip-path: inset(1px 1px);
+  width: 100%;
 }
 @keyframes swing {
   0% {
