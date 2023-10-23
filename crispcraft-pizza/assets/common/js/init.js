@@ -1,5 +1,19 @@
 !(function ($) {
   $(document).ready(function () {
+    // Disable right-click
+    window.addEventListener("contextmenu", function (e) {
+      e.preventDefault();
+    });
+    // Disable image downloads (prevents drag and drop)
+    document.addEventListener("dragstart", function (e) {
+      e.preventDefault();
+    });
+    // Disable viewing page source (Ctrl+U)
+    window.addEventListener("keydown", function (e) {
+      if (e.key === "U" && (e.ctrlKey || e.metaKey)) {
+        e.preventDefault();
+      }
+    });
     function detectDevice() {
       var head = document.head,
         commonCSS = "assets/common/css/common.min.css",
@@ -172,12 +186,11 @@
             }
           );
       });
-      document.addEventListener("DOMContentLoaded", function() {
-        const offscreenImages = document.querySelectorAll('img.offscreen');
-        offscreenImages.forEach(function(image) {
-          image.loading = "lazy";
-        });
+    document.addEventListener("DOMContentLoaded", function () {
+      const offscreenImages = document.querySelectorAll("img.offscreen");
+      offscreenImages.forEach(function (image) {
+        image.loading = "lazy";
       });
-      
+    });
   });
 })(jQuery);
