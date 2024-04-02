@@ -110,7 +110,7 @@ Navigation End  Here
 Banner Start  Here
  */
 .banner {
-    background-image: url("../images/banner.png");
+    background-image: url("../images/banner.PNG");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
