@@ -1,0 +1,662 @@
+/**
+Custom CSS Start Here
+ */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700;900&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+    color: #ffffff;
+    background-color: #000000;
+    line-height: 1;
+    letter-spacing: 2px;
+}
+
+h1 {
+    font-size: 4.5rem;
+    line-height: 4.5rem;
+    font-weight: 900;
+}
+
+h2 {
+    font-size: 2.75rem;
+    line-height: 2.75rem;
+    font-weight: 900;
+}
+
+h3 {
+    font-size: 2.81rem;
+    line-height: 2.81rem;
+}
+
+h4 {
+    font-size: 1.875rem;
+}
+
+h5 {
+    font-size: 1.56rem;
+}
+
+p {
+    font-size: 1rem;
+    line-height: 1rem;
+    color: #9e9e9e;
+    opacity: 1;
+}
+
+a {
+    font-size: 1rem;
+    outline: none;
+}
+
+img {
+    outline: none;
+}
+
+div {
+    outline: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+.bg-black {
+    background-color: #000000;
+}
+
+.jumbotron {
+    background-color: unset;
+}
+
+.custom-btn {
+    letter-spacing: 4px;
+    font-size: 16px;
+    height: 62px;
+    line-height: 62px;
+    padding: 0 25px;
+    background: #ffffff;
+    display: inline-block;
+    color: #000000;
+    border-radius: 0;
+    border: 1px solid rgba(255, 255, 255, .15);
+    box-shadow: 0 0 12px rgba(255, 255, 255, 0);
+}
+
+.custom-btn:hover {
+    color: #fff !important;
+    background: #BF1363 !important;
+}
+
+/**
+Custom CSS End Here
+ */
+
+
+/**
+Navigation Start start Here
+ */
+.navbar-wrapper a {
+    text-transform: uppercase;
+    color: #ffffff;
+    letter-spacing: 2px;
+    padding: 0 20px;
+}
+
+/**
+Navigation End  Here
+ */
+
+/**
+Banner Start  Here
+ */
+.banner {
+    background-image: url("../images/banner.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.banner .jumbotron {
+    text-align: center;
+    text-transform: uppercase;
+    color: #ffffff;
+}
+
+.banner .jumbotron .banner-heading h4 {
+    background-color: #BF1363;
+    font-weight: 900;
+}
+
+.banner .jumbotron h1 {
+    margin: 20px 0;
+    font-weight: 900;
+}
+
+.banner .jumbotron p {
+    text-transform: none;
+    font-weight: 500;
+}
+
+/**
+Banner End  Here
+ */
+
+
+/**
+Our Latest Work  start Here
+ */
+.latest-work {
+    padding: 60px 0;
+    text-align: center;
+}
+
+.latest-work ul {
+    justify-content: center;
+    margin: 50px 0;
+}
+
+.latest-worktab li {
+    list-style: disc;
+    color: #BF1363;
+}
+
+.latest-worktab .nav-link {
+    opacity: .35;
+    text-transform: uppercase;
+    color: #ffffff;
+    font-weight: 700;
+    padding-left: 0;
+    padding-right: 50px;
+}
+
+.latest-worktab .nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+    background: unset;
+    color: #BF1363;
+    opacity: unset;
+}
+
+.latest-worktab .card {
+    background-color: #050505;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.latest-worktab .card p {
+    color: #ffffff;
+    opacity: .35;
+}
+
+.latest-worktab .card-body:hover {
+    background-color: #BF1363;
+}
+
+.latest-worktab .tab-pane {
+    margin: 50px 0;
+}
+
+/**
+Our Latest Work End  Here
+ */
+
+
+/**
+Our Work Process Start  Here
+ */
+.work-process {
+    padding: 60px 0;
+    text-align: center;
+}
+
+.work-process h2 {
+    padding: 0 0 10px;
+}
+
+.work-content {
+    padding: 60px 0 0;
+}
+
+.work-content .numbers {
+    background-color: #0D0D0D;
+    width: 23%;
+    padding: 40px 0 5px;
+    margin: 30px auto;
+    border-radius: 50%;
+    height: 45%;
+    color: #BF1363;
+}
+
+.work-content p {
+    color: #9e9e9e;
+    opacity: 1;
+}
+
+/**
+Our Work Process Ends  Here
+ */
+
+
+/**
+we prepared Start  Here
+ */
+.we-prepared {
+    padding: 60px 0 0;
+    text-align: center;
+    background-image: url("../images/we-prepared.PNG");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.we-prepared i {
+    font-size: 80px;
+    margin: 50px 0;
+    color: #BF1363;
+}
+
+/**
+we prepared Ends  Here
+ */
+
+
+/**
+About us start  Here
+ */
+.about-us {
+    padding: 60px 0;
+    text-align: center;
+}
+
+.about-us .heading {
+    background-color: #BF1363;
+}
+
+.about-caurosel {
+    margin: 30px 0;
+    position: relative;
+}
+
+.aboutarrow-left {
+    border: 1px solid #000000;
+    border-radius: 50%;
+    padding: 12px 15px;
+    background-color: #000000;
+    color: #ffffff;
+    position: absolute;
+    top: 40%;
+    left: 2%;
+}
+
+.aboutarrow-right {
+    border: 1px solid #000000;
+    border-radius: 50%;
+    padding: 12px 15px;
+    background-color: #000000;
+    color: #ffffff;
+    position: absolute;
+    top: 40%;
+    right: 2%;
+}
+
+.about-caurosel.owl-theme .owl-dots .owl-dot span {
+    width: 25px;
+    height: 2px;
+    border-radius: 0;
+    background-color: #ffffff;
+}
+
+.about-caurosel .owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span {
+    background-color: #BF1363;
+}
+
+/**
+About us Ends  Here
+ */
+
+
+/**
+Our Mission Start  Here
+ */
+.mission {
+    padding: 60px 0;
+}
+
+.mission h3 {
+    margin: 20px 0;
+}
+
+.mission p {
+    color: #bdbdbd;
+    line-height: 1.6em;
+    text-align: left;
+}
+
+.mission h6 {
+    margin: 20px 0 10px;
+    opacity: .75;
+    font-size: 12px;
+}
+
+.mission .progress-bar {
+    background-color: #BF1363;
+}
+
+/**
+Our Mission Ends  Here
+ */
+
+
+/**
+Team Start Here
+ */
+.team {
+    padding: 60px 0;
+    text-align: center;
+}
+
+.team-image {
+    position: relative;
+    width: 220px;
+    height: 220px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 10px solid rgba(255, 255, 255, .05);
+    margin-bottom: 20px;
+    -webkit-transition-duration: .3s;
+    -moz-transition-duration: .3s;
+    -ms-transition-duration: .3s;
+    -o-transition-duration: .3s;
+    margin-top: 30px;
+}
+
+.social-icons {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.social-icons li {
+    display: inline-block;
+}
+
+.social-icons a {
+    width: 36px;
+    height: 36px;
+    line-height: 36px;
+    border: 1px solid rgba(255, 255, 255, .15);
+    display: block;
+    border-radius: 50%;
+    color: #fff;
+    padding: 0;
+    letter-spacing: 0;
+}
+
+
+/**
+Team Ends Here
+ */
+
+/**
+Creative start here
+ */
+
+.creative {
+    padding: 60px 0 0;
+    text-align: center;
+    background-image: url("../images/creative.PNG");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.creative .jumbotron h2 {
+    margin: 0 0 25px;
+}
+
+.creative .jumbotron span:before {
+    width: 100px;
+    height: 2px;
+    background: #BF1363;
+    display: inline-block;
+    content: '';
+    vertical-align: middle;
+    margin-right: 20px;
+}
+
+
+.creative .jumbotron span:after {
+    width: 100px;
+    height: 2px;
+    background: #BF1363;
+    display: inline-block;
+    content: '';
+    vertical-align: middle;
+    margin-left: 20px;
+}
+
+/**
+Creative ends here
+ */
+
+/**
+service start here
+ */
+.services {
+    padding: 60px 0;
+    text-align: center;
+}
+
+.service-icon {
+    width: 100px;
+    height: 100px;
+    line-height: 120px;
+    border: 1px solid rgba(255, 255, 255, .05);
+    display: block;
+    border-radius: 50%;
+    color: #fff;
+    padding: 0;
+    letter-spacing: 0;
+    text-align: center;
+    margin: 40px auto;
+    background: rgba(255, 255, 255, .05);
+}
+
+.service-icon i {
+    font-size: 56px;
+    color: #BF1363;
+}
+
+
+/**
+service end here
+ */
+
+
+/**
+pricing start here
+ */
+
+.pricing {
+    padding: 60px 0;
+    text-align: center;
+}
+
+.price {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: #BF1363;
+    color: #fff;
+    margin: 25px auto -20px;
+    padding-top: 80px;
+}
+
+.pricing .card-deck {
+    margin: 40px 0;
+}
+
+.pricing .card {
+    background-color: #0D0D0D;
+    color: #ffffff;
+    padding: 40px 0;
+}
+
+.pricing .card-title {
+    margin: 40px 0;
+}
+
+.pricing .btn {
+    margin: 40px 0;
+}
+
+/**
+pricing end here
+ */
+
+
+/**
+FAQS start here
+ */
+
+.faqs {
+    padding: 60px 0;
+    text-align: center;
+}
+
+.faqs-content {
+    margin: 50px 0;
+    text-align: left;
+}
+
+.faqs-content .col-md-6 {
+    margin: 20px 0;
+}
+
+/**
+FAQS End here
+ */
+
+
+/**
+Clients start here
+ */
+
+.clients {
+    padding: 60px 0;
+    text-align: center;
+    background-image: url("../images/clients.PNG");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+.client-image {
+    position: relative;
+    width: 220px;
+    height: 220px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 10px solid rgba(255, 255, 255, .05);
+    margin-bottom: 20px;
+    -webkit-transition-duration: .3s;
+    -moz-transition-duration: .3s;
+    -ms-transition-duration: .3s;
+    -o-transition-duration: .3s;
+    margin-top: 30px;
+}
+
+.clients a {
+    color: #ffffff;
+}
+
+.client-carousel {
+    margin: 0 auto;
+}
+
+/**
+Clients End here
+ */
+
+
+/**
+contact us start here
+ */
+
+.contact-us {
+    padding: 60px 0;
+    text-align: center;
+}
+
+.contact-form .form-group {
+    text-align: left;
+    margin: 20px 0;
+}
+
+.contact-form .col-md-4 {
+    text-align: left;
+    margin: 20px 0;
+}
+
+.contact-form .form-control {
+    background-color: #101010;
+    border: 1px solid #101010;
+    border-radius: 0;
+}
+
+/**
+contact us end here
+ */
+
+
+/**
+Instagram Start here
+ */
+.instagram {
+    padding: 60px 0 0;
+    text-align: center;
+}
+
+.instagram .col-12 {
+    padding: 40px 0;
+}
+
+.instagram .img-thumbnail{
+    border-color:#000000;
+    background-color:#000000;
+}
+
+/**
+Instagram  end here
+ */
+
+/**
+Footer start here
+ */
+
+.footer {
+    padding: 60px 0;
+    text-align: center;
+    border-top: 1px solid rgba(255,255,255,.1);
+}
+
+.footer-social ul{
+    display: flex;
+    justify-content: center;
+}
+
+.footer-social li{
+    padding:60px 30px;
+}
+
+.footer h5 , h6{
+    color: #bdbdbd;
+    opacity: .5;
+}
+
+/**
+Footer end here
+ */

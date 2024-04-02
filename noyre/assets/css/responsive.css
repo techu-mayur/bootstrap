@@ -1,0 +1,429 @@
+/*
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 320px to 479px
+*/
+
+@media (min-width: 320px) and (max-width: 480px) {
+    /**
+    Custom CSS Start Here
+     */
+    h1 {
+        font-size: 2.5rem;
+        line-height: 2.5rem;
+    }
+
+    h2 {
+        font-size: 1.68rem;
+        line-height: 1.68rem;
+    }
+
+    h3 {
+        font-size: 1.56rem;
+        line-height: 1.56rem;
+    }
+
+    h4 {
+        font-size: 1.25rem;
+    }
+
+    br {
+        display: none;
+    }
+
+    /**
+    Custom CSS End Here
+     */
+    /**
+    Navigation Start start Here
+    */
+    .icon-bar {
+        display: block;
+        width: 22px;
+        height: 2px;
+        background-color: #ffffff;
+        border-radius: 1px;
+        margin: 4px 0 4px 0;
+        transition: all 0.2s;
+    }
+
+    .top-bar {
+        transform: rotate(45deg);
+        transform-origin: 10% 10%;
+    }
+
+    .middle-bar {
+        opacity: 0;
+    }
+
+    .bottom-bar {
+        transform: rotate(-45deg);
+        transform-origin: 10% 90%;
+    }
+
+    .collapsed .top-bar {
+        transform: rotate(0);
+    }
+
+    .collapsed .middle-bar {
+        opacity: 1;
+    }
+
+    .collapsed .bottom-bar {
+        transform: rotate(0);
+    }
+
+    .navbar-toggler:focus, .navbar-toggler:hover {
+        outline: none;
+    }
+
+    .navbar-wrapper {
+        text-align: center;
+    }
+
+    .navbar-wrapper li {
+        margin: 20px 0;
+    }
+
+
+    /**
+    Navigation End start Here
+    */
+    /**
+    Our Latest Work End  Here
+ */
+    .latest-worktab .nav-link {
+        padding-right: 30px;
+    }
+
+    .latest-work ul {
+        padding-left: 36px;
+    }
+
+    .latest-work {
+        padding: 60px 0 0;
+    }
+
+    /**
+    Our Latest Work End  Here
+     */
+    /**
+    Our Work Process Start  Here
+     */
+    .work-process {
+        padding: 0 0 60px;
+    }
+
+    .work-content .numbers {
+        width: 34%;
+    }
+
+    /**
+    Our Work Process Ends  Here
+ */
+
+    /**
+   Creative start here
+    */
+
+    .creative .jumbotron span:before {
+        width: 80px;
+    }
+
+
+    .creative .jumbotron span:after {
+        width: 80px;
+    }
+
+    /**
+    Creative ends here
+     */
+
+    /**
+contact us start here
+ */
+
+    .contact-form .col-12 {
+        text-align: left;
+        margin: 20px 0;
+    }
+
+
+
+    /**
+    contact us end here
+     */
+
+
+    /**
+    Footer start here
+     */
+
+
+
+    .footer-social ul{
+        display: inline-block;
+        justify-content: center;
+    }
+
+    .footer-social li{
+        padding:20px 0;
+    }
+
+    .footer .col-12 {
+      margin:20px 0;
+    }
+
+    /**
+    Footer end here
+     */
+
+
+}
+
+/*
+  ##Device = Low Resolution Tablets, Mobiles (Landscape)
+  ##Screen = B/w 481px to 767px
+*/
+
+@media (min-width: 481px) and (max-width: 767px) {
+
+    /**
+  Custom CSS Start Here
+   */
+    h1 {
+        font-size: 2.5rem;
+        line-height: 2.5rem;
+    }
+
+    h2 {
+        font-size: 1.68rem;
+        line-height: 1.68rem;
+    }
+
+    h3 {
+        font-size: 1.56rem;
+        line-height: 1.56rem;
+    }
+
+    h4 {
+        font-size: 1.25rem;
+    }
+
+    br {
+        display: none;
+    }
+
+    /**
+    Custom CSS End Here
+     */
+    /**
+    Navigation Start start Here
+    */
+    .icon-bar {
+        display: block;
+        width: 22px;
+        height: 2px;
+        background-color: #ffffff;
+        border-radius: 1px;
+        margin: 4px 0 4px 0;
+        transition: all 0.2s;
+    }
+
+    .top-bar {
+        transform: rotate(45deg);
+        transform-origin: 10% 10%;
+    }
+
+    .middle-bar {
+        opacity: 0;
+    }
+
+    .bottom-bar {
+        transform: rotate(-45deg);
+        transform-origin: 10% 90%;
+    }
+
+    .collapsed .top-bar {
+        transform: rotate(0);
+    }
+
+    .collapsed .middle-bar {
+        opacity: 1;
+    }
+
+    .collapsed .bottom-bar {
+        transform: rotate(0);
+    }
+
+    .navbar-toggler:focus, .navbar-toggler:hover {
+        outline: none;
+    }
+
+    .navbar-wrapper {
+        text-align: center;
+    }
+
+    .navbar-wrapper li {
+        margin: 20px 0;
+    }
+
+
+    /**
+    Navigation End start Here
+    */
+    /**
+    Our Latest Work End  Here
+ */
+    .latest-worktab .nav-link {
+        padding-right: 30px;
+    }
+
+    .latest-work ul {
+        padding-left: 36px;
+    }
+
+    .latest-work {
+        padding: 60px 0 0;
+    }
+
+    /**
+    Our Latest Work End  Here
+     */
+    /**
+    Our Work Process Start  Here
+     */
+    .work-process {
+        padding: 0 0 60px;
+    }
+
+
+
+    /**
+    Our Work Process Ends  Here
+ */
+}
+
+/*
+  ##Device = Tablets, Ipads (portrait)
+  ##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    /**
+    Custom CSS Start Here
+     */
+    h1 {
+        font-size: 2.5rem;
+        line-height: 2.5rem;
+    }
+
+    h2 {
+        font-size: 1.68rem;
+        line-height: 1.68rem;
+    }
+
+    h3 {
+        font-size: 1.56rem;
+        line-height: 1.56rem;
+    }
+
+    h4 {
+        font-size: 1.25rem;
+    }
+
+    br {
+        display: none;
+    }
+
+    /**
+    Custom CSS End Here
+     */
+    /**
+    Navigation Start start Here
+    */
+    .icon-bar {
+        display: block;
+        width: 22px;
+        height: 2px;
+        background-color: #ffffff;
+        border-radius: 1px;
+        margin: 4px 0 4px 0;
+        transition: all 0.2s;
+    }
+
+    .top-bar {
+        transform: rotate(45deg);
+        transform-origin: 10% 10%;
+    }
+
+    .middle-bar {
+        opacity: 0;
+    }
+
+    .bottom-bar {
+        transform: rotate(-45deg);
+        transform-origin: 10% 90%;
+    }
+
+    .collapsed .top-bar {
+        transform: rotate(0);
+    }
+
+    .collapsed .middle-bar {
+        opacity: 1;
+    }
+
+    .collapsed .bottom-bar {
+        transform: rotate(0);
+    }
+
+    .navbar-toggler:focus, .navbar-toggler:hover {
+        outline: none;
+    }
+
+    .navbar-wrapper {
+        text-align: center;
+    }
+
+    .navbar-wrapper li {
+        margin: 20px 0;
+    }
+
+
+    /**
+    Navigation End start Here
+    */
+    /**
+    Our Latest Work End  Here
+ */
+    .latest-worktab .nav-link {
+        padding-right: 30px;
+    }
+
+    .latest-work ul {
+        padding-left: 36px;
+    }
+
+    .latest-work {
+        padding: 60px 0 0;
+    }
+
+    /**
+    Our Latest Work End  Here
+     */
+    /**
+    Our Work Process Start  Here
+     */
+    .work-process {
+        padding: 0 0 60px;
+    }
+
+    .work-content .numbers {
+        width: 34%;
+    }
+
+    /**
+    Our Work Process Ends  Here
+ */
+
+}
